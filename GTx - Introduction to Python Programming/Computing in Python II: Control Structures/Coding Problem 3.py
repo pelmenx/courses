@@ -34,9 +34,3 @@ print(num_factors(6))
 print(num_factors(97))
 print(num_factors(105))
 print(num_factors(999))
-
-
-
-
-
-

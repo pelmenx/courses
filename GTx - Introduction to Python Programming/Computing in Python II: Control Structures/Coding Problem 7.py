@@ -59,7 +59,3 @@ def valid_release_date(d, n):
 print(valid_release_date(date(2018, 7, 11), "Show"))
 print(valid_release_date(date(2018, 7, 11), "Movie"))
 print(valid_release_date(date(2018, 7, 11), "Pancake"))
-
-
-
-

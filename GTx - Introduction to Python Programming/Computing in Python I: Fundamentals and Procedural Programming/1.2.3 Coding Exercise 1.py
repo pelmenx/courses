@@ -1,1 +1,1 @@
-print ("Hello, CS1301")
+print("Hello, CS1301")

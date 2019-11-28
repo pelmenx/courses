@@ -43,9 +43,3 @@ def remove_capitals(s):
 # eorgia nstitute of echnology
 print(remove_capitals("A1B2C3D"))
 print(remove_capitals("Georgia Institute of Technology"))
-
-
-
-
-
-

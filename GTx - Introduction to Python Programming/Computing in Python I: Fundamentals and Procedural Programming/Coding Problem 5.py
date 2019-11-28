@@ -75,6 +75,3 @@ if number1 < 2:
     two = "0" + two
 
 print(two)
-
-
-

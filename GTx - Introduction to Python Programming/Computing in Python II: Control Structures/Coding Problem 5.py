@@ -31,7 +31,3 @@ try:
     print(the_string)
 except AttributeError:
     print("The variable was not a string!")
-
-
-
-

@@ -21,5 +21,3 @@ if ((mystery_int_1 % mystery_int_2) == 0 or (mystery_int_2 % mystery_int_1) == 0
     print("Factors!")
 else:
     print('Not factors :(')
-
-

@@ -8,6 +8,7 @@
 # change either the function declaration (on line 11) or the
 # function call on line 27.
 
+
 def soda_habit(sodas_per_week, price_per_soda, calories_per_soda, preferred_soda):
     # Above, we've moved preferred_soda to the beginning and
     # sodas_per_week to the end, so our original function
@@ -18,7 +19,8 @@ def soda_habit(sodas_per_week, price_per_soda, calories_per_soda, preferred_soda
     money_spent = price_per_soda * sodas_per_week
     calories_consumed = calories_per_soda * sodas_per_week
 
-    summary_string = "You're spending $" + str(money_spent) + " on " + preferred_soda + " per week! "
+    summary_string = "You're spending $" + \
+        str(money_spent) + " on " + preferred_soda + " per week! "
     summary_string += " That's " + str(calories_consumed) + " calories!"
 
     return summary_string
@@ -28,11 +30,3 @@ result = soda_habit(9, 1.75, 140, "Coca-Cola")
 
 # 1.75
 print(result)
-
-
-
-
-
-
-
-

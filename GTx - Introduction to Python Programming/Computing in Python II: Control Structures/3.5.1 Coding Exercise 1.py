@@ -25,5 +25,3 @@ print(has_a_vowel("abba"))
 print(has_a_vowel("beeswax"))
 print(has_a_vowel("syzygy"))
 print(has_a_vowel(""))
-
-

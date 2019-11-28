@@ -1,5 +1,5 @@
-#Brute-force the following Caesar’s cipher, and find the plaintext and key of the following message:
-#kyvtrmrcipnzccrkkrtbwifdkyvefikynvjkrkeffe
+# Brute-force the following Caesar’s cipher, and find the plaintext and key of the following message:
+# kyvtrmrcipnzccrkkrtbwifdkyvefikynvjkrkeffe
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 

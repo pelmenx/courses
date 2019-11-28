@@ -32,5 +32,3 @@ def num_words(string):
 print(num_words("Vini, Vidi, Vici."))
 print(num_words("Hello, world!"))
 print(num_words("HeyDavidwhyaren'ttherespacesinthissentence"))
-
-

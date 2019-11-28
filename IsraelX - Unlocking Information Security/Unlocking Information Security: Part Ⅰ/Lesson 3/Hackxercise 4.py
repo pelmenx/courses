@@ -9,7 +9,7 @@ import hashlib
 
 def weak_md5(s):
     result = hashlib.md5(s.encode())
-    result=result.hexdigest()[:5]
+    result = result.hexdigest()[:5]
     return result
 
 
@@ -25,7 +25,7 @@ def find_collisions(s1):
             hash2 = weak_md5(s2)
 
             if (hash1 == hash2) and (s1 != s2):
-                return (s1,s2)
+                return (s1, s2)
 
 
 string1 = "foo"

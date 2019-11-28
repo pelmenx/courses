@@ -31,7 +31,3 @@ def align_right(string,num):
 #If your function works correctly, this will originally
 #print: "    CS1301"
 print(align_right("CS1301", 10))
-
-
-
-

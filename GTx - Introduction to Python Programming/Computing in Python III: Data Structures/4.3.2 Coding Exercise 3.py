@@ -40,7 +40,3 @@ def character_info(character):
 print(character_info("q"))
 print(character_info("7"))
 print(character_info("`"))
-
-
-
-

@@ -34,8 +34,3 @@ def write_file(file, text):
 # in the top left after running it, the contents of the
 # file should be 1301.
 write_file("WriteFileOutput.txt", 1301)
-
-
-
-
-

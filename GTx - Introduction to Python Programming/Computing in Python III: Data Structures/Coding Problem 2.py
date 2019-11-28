@@ -57,6 +57,3 @@ def write_movie_info(filename, films):
 movies = {"Chocolat": ["Juliette Binoche", "Judi Dench", "Johnny Depp", "Alfred Molina"],
           "Skyfall": ["Judi Dench", "Daniel Craig", "Javier Bardem", "Naomie Harris"]}
 write_movie_info("Test.txt", movies)
-
-
-

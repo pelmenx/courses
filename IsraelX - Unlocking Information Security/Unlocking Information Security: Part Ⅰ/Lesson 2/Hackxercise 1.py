@@ -1,6 +1,8 @@
-#Implement Caesar’s cipher: implement a function encrypt that given a plaintext string and a key  𝑘
-#(how many letters to shift), returns a ciphertext where each character is shifted  𝑘  places.
-#(You can assume all characters are lowercase letters, with no punctuation or spaces.)
+# Implement Caesar’s cipher: implement a function encrypt that given a plaintext string and a key  𝑘
+# (how many letters to shift), returns a ciphertext where each character is shifted  𝑘  places.
+# (You can assume all characters are lowercase letters, with no punctuation or spaces.)
+
+
 def encrypt(plaintext, k):
     alphabet_list = []
     alphabet = 'abcdefghijklmnopqrstuvwxyz'

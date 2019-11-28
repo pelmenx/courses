@@ -24,5 +24,3 @@ def steps():
 
 #The line below will test your function.
 print(steps())
-
-

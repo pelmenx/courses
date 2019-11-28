@@ -1,12 +1,12 @@
-#The function check_password(password) is used by a safe with 4-digits passwords, and is susceptible to timing attacks.
-#More specifically, it takes it around 0.1 seconds to check one digit – so brute-forcing all the possible combinations
-#will take around 1,500 hours. Can you implement a way to crack its password in less than a minute?
+# The function check_password(password) is used by a safe with 4-digits passwords, and is susceptible to timing attacks.
+# More specifically, it takes it around 0.1 seconds to check one digit – so brute-forcing all the possible combinations
+# will take around 1,500 hours. Can you implement a way to crack its password in less than a minute?
 
+from Root.pswd import real_password
 import time
 import sys  # ignore
 
 sys.path.insert(0, '.')  # ignore
-from Root.pswd import real_password
 
 
 def check_password(password):  # Don't change it

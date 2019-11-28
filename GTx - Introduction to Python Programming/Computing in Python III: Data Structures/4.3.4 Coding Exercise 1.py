@@ -41,5 +41,3 @@ def multiply_strings(character_list):
 #['AAAAAA', 'B', 'CC', 'DDD', 'EE', 'F', 'GGGGGG']
 test_list = ["A", "B", "C", "D", "E", "F", "G"]
 print(multiply_strings(test_list))
-
-

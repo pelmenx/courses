@@ -1,6 +1,8 @@
 # Write a XOR cipher: implement a function encrypt that given a plaintext string and a key  𝑘
 # (also a string), returns a ciphertext where each character is XORed with its respective character in  𝑘 .
 # Assume that the plaintext and key have the same length. (that is, plaintext[i] is XORed with k[i]).
+
+
 def to_bin(string):
     string_binary = bytes(string, 'utf-8')
     string_binary_list = []

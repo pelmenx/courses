@@ -16,6 +16,7 @@ def find_numbers(array, goal):
     return False
 
 
-numbers_list = [10, 15, 3, 7]
-
-print(find_numbers(numbers_list, 17))
+# tests
+print(find_numbers([10, 15, 3, 7], 17))
+print(find_numbers([10, 15, 3], 17))
+print(find_numbers([10, 0, -10], 0))

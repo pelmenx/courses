@@ -21,6 +21,7 @@ def product(array):
         return False
 
 
+# tests
 print(product([1, 2, 3, 4, 5]))
 print(product([3, 2, 1]))
 print(product([1, 2]))

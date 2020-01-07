@@ -40,9 +40,9 @@ def names_to_apa(string):
         names[i].reverse()
     for name in names:
         if "and" in name:
-            apa_string += "& "+name[0]+", "+name[1][0]+"."
+            apa_string += "& " + name[0] + ", " + name[1][0] + "."
         else:
-            apa_string += name[0]+", "+name[1][0]+"., "
+            apa_string += name[0] + ", " + name[1][0] + "., "
     return apa_string
 
 

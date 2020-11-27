@@ -13,7 +13,7 @@ def count_rectangles(array):
                                         if ((diag(path1[0], path3[0]) == diag(path2[0], path4[0])) and (diag(path1[0], path1[1]) == diag(path3[0], path3[1]))and (diag(path2[0], path2[1]) == diag(path4[0], path4[1]))):
                                             if (diag(path1[0], path3[0]) > 0 and diag(path2[0], path4[0]) > 0 and diag(path1[0], path1[1]) > 0 and diag(path3[0], path3[1]) > 0 and diag(path2[0], path2[1]) > 0 and diag(path4[0], path4[1]) > 0):
                                                 count += 1
-                                                # print(path1, " ", path2, " ", path3, " ", path4, " ", count)
+
 
     return count / 24
 
@@ -33,14 +33,20 @@ def find_roads(dots):
     return roads
 
 
-dots_list1 = [[0, 1], [1, 1], [1, 0], [0, 0]]
-dots_list2 = [[0, 1], [1, 1], [2, 1], [0, 0], [1, 0], [2, 0]]
-dots_list3 = [[0, 2], [1, 2], [2, 2], [0, 1],
-              [1, 1], [2, 1], [0, 0], [1, 0], [2, 0]]
-dots_list4 = [[0, 3], [1, 3], [2, 3], [0, 2], [1, 2], [
-    2, 2], [0, 1], [1, 1], [2, 1], [0, 0], [1, 0], [2, 0]]
+dots_list1 = [[0, 1], [1, 1],\
+              [0, 0], [1, 0]]
+dots_list2 = [[0, 2], [1, 2],\
+              [0, 1], [1, 1],\
+              [0, 0], [1, 0]]
+dots_list3 = [[0, 2], [1, 2], [2, 2],\
+              [0, 1], [1, 1], [2, 1],\
+              [0, 0], [1, 0], [2, 0]]
+dots_list4 = [[0, 3], [1, 3], [2, 3],\
+              [0, 2], [1, 2], [2, 2],\
+              [0, 1], [1, 1], [2, 1],\
+              [0, 0], [1, 0], [2, 0]]
 
 print(count_rectangles(dots_list1))
 print(count_rectangles(dots_list2))
 print(count_rectangles(dots_list3))
-# print(count_rectangles(dots_list4))
+print(count_rectangles(dots_list4))

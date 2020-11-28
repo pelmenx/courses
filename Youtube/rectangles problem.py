@@ -9,7 +9,7 @@ def count_rectangles(array):
                         for path3 in pathes3:
                             for pathes4 in road_table:
                                 for path4 in pathes4:
-                                    # create a chain
+                                    # create a chain of lines
                                     if path2[0] == path1[1] and path3[0] == path2[1] and path4[0] == path3[1] and path1[0] == path4[1]:
                                         # opisite sides should be equal
                                         if length(path1) == length(path3) and length(path2) == length(path4):

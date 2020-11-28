@@ -10,15 +10,21 @@ def count_rectangles(array):
                             for pathes4 in road_table:
                                 for path4 in pathes4:
                                     if path2[0] == path1[1] and path3[0] == path2[1] and path4[0] == path3[1] and path1[0] == path4[1]:
-                                        if ((diag(path1[0], path3[0]) == diag(path2[0], path4[0])) and (diag(path1[0], path1[1]) == diag(path3[0], path3[1])) and (diag(path2[0], path2[1]) == diag(path4[0], path4[1]))):
-                                            if (diag(path1[0], path3[0]) > 0 and diag(path2[0], path4[0]) > 0 and diag(path1[0], path1[1]) > 0 and diag(path3[0], path3[1]) > 0 and diag(path2[0], path2[1]) > 0 and diag(path4[0], path4[1]) > 0):
-                                                count += 1
+                                        if lenght(path1) == lenght(path3) and lenght(path2) == lenght(path4):
+                                            if lenght(path1) > 0 and lenght(path2) > 0 and lenght(path3) > 0 and lenght(path4) > 0:
+                                                if diag(path1[0], path3[0]) == diag(path2[0], path4[0]):
+                                                    if diag(path1[0], path3[0]) > 0 and diag(path2[0], path4[0]) > 0:
+                                                        count += 1
 
     return count / 24
 
 
 def diag(dot1, dot2):
     return ((dot1[0] - dot2[0]) ** 2 + (dot1[1] - dot2[1]) ** 2)**(1 / 2)
+
+
+def lenght(line):
+    return ((line[0][0] - line[1][0]) ** 2 + (line[0][1] - line[1][1]) ** 2)**(1 / 2)
 
 
 def find_roads(dots):

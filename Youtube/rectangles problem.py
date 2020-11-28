@@ -1,3 +1,5 @@
+# show how many rectangles you draw among dots
+
 def count_rectangles(array):
     road_table = find_roads(array)
     count = 0
@@ -32,8 +34,8 @@ def length(line):
     return ((line[0][0] - line[1][0]) ** 2 + (line[0][1] - line[1][1]) ** 2)**(1 / 2)
 
 
+# return all possible roads for every dot
 def find_roads(dots):
-    # return all possible roads for every dot
     roads = []
     for i in range(0, len(dots)):
         roads.append([])

@@ -24,7 +24,7 @@
 # Write your function here!
 def find_median(file_name):
     list_of_integer = []
-    file = open(file_name, "r")
+    file = open("./GTx - Introduction to Python Programming/Computing in Python III: Data Structures/"+file_name, "r")
     for line in file:
         list_of_integer.append(int(line.strip()))
     list_of_integer.sort()

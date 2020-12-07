@@ -21,7 +21,7 @@
 
 # Write your function here!
 def append_to_file(file1, text):
-    append_file = open(file1, "a+")
+    append_file = open("./GTx - Introduction to Python Programming/Computing in Python III: Data Structures/"+file1, "a+")
     print(text, file=append_file)
     append_file.close()
 

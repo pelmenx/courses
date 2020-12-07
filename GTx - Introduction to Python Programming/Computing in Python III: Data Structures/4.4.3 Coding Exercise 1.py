@@ -20,7 +20,7 @@
 
 # Write your function here!
 def write_file(file, text):
-    open_file = open(file, "w+")
+    open_file = open("./GTx - Introduction to Python Programming/Computing in Python III: Data Structures/"+file, "w+")
     open_file.write(str(text))
     open_file.close()
 

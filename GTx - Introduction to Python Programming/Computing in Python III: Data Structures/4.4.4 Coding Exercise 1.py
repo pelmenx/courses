@@ -10,7 +10,7 @@
 # Write your function here!
 
 def find_coffee(file):
-    read_file = open(file, "r")
+    read_file = open("./GTx - Introduction to Python Programming/Computing in Python III: Data Structures/"+file, "r")
     string = read_file.read()
     if 'coffee' in string:
         read_file.close()

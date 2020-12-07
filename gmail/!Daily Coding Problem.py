@@ -1,10 +1,9 @@
 import imaplib
 import email
-import variables
 
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login(variables.login, variables.password)
+mail.login("login", "password")
 
 mail.list()
 mail.select("Daily_Coding_Problem")

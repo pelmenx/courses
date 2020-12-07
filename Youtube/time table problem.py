@@ -45,7 +45,6 @@ def cross_time(shift_1, shift_2, minutes=0):
                 AND_time[j].sort()
                 AND_time[j] = AND_time[j][1:3]
                 j += 1
-    print(AND_time)
     return cross_time_more_then(AND_time, minutes)
 
 

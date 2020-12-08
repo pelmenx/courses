@@ -15,62 +15,96 @@
 # --------------------------------------------------------------------------------
 #
 #
-def encoder(encode_text, text=[], tmp_text1=[]):
-    map = {"1": "a", "2": "b", "3": "c", "4": "d", "5": "e", "6": "f", "7": "g", "8": "h", "9": "i",
-           "10": "j", "11": "k", "12": "l", "13": "m", "14": "n", "15": "o", "16": "p", "17": "q",
-           "18": "r", "19": "s", "20": "t", "21": "u", "22": "v", "23": "w", "24": "x", "25": "y", "26": "z"}
+def encoder(encode_text, mapper=[]):
+    global value
     if len(encode_text) == 1:
-        count = 1
-
-        text.append(encode_text)
-        tmp_text1.extend(text)
-        text = tmp_text1
-        print("!", text)
-        for i in text:
-            print(map[i], end='')
-        print()
-        text = []
+        try:
+            mapper = value[-1][1].split(" ")
+        except IndexError:
+            pass
+        finally:
+            mapper.append(encode_text)
+            print(mapper)
+            count = mapping(mapper, 1)
     elif len(encode_text) == 2:
         if int(encode_text) >= 1 and int(encode_text) <= 26:
-            count = 2
-
-            tmp_text = text.copy()
-            text.append(encode_text[0])
-            text.append(encode_text[1])
-            print("@", text)
-            for i in text:
-                print(map[i], end='')
-            print()
-            text = []
-            text.extend(tmp_text)
-            text.append(encode_text)
-            print("#", text)
-            for i in text:
-                print(map[i], end='')
-            print()
-            text = []
+            try:
+                mapper = value[-1][1].split(" ")
+            except IndexError:
+                pass
+            finally:
+                mapper.append(encode_text)
+                print(mapper)
+                count = mapping(mapper, 2)
+                try:
+                    mapper = value[-1][1].split(" ")
+                except IndexError:
+                    mapper.clear()
+                finally:
+                    mapper.append(encode_text[0])
+                    mapper.append(encode_text[1])
+                    print(mapper)
+                    count = mapping(mapper, count)
         else:
-            count = 1
-
-            print(encode_text)
-            text.append(encode_text[0])
-            text.append(encode_text[1])
-            print("%", text)
-            for i in text:
-                print(map[i], end='')
-            print()
-            text = []
+            try:
+                mapper = value[-1][1].split(" ")
+            except IndexError:
+                pass
+            finally:
+                mapper.append(encode_text[0])
+                mapper.append(encode_text[1])
+                print(mapper)
+                count = mapping(mapper, 1)
     else:
-
-        tmp_text1 = text.copy()
-        text.append(encode_text[:1])
-        count = encoder(encode_text[1:], text, tmp_text1)
-        text = []
+        if value == []:
+            value.append([1, encode_text[:1]])
+        else:
+            i = value[len(value) - 1][0]
+            i += 1
+            j = value[len(value) - 1][1]
+            j = j + " " + encode_text[:1]
+            value.append([i, j])
+        count = encoder(encode_text[1:])
         if int(encode_text[:2]) >= 1 and int(encode_text[:2]) <= 26:
-            text.append(encode_text[:2])
-            count += encoder(encode_text[2:], text, tmp_text1)
+            tmp_length = length - len(encode_text)
+            check = 0
+            for item in value:
+                if item[0] == tmp_length:
+                    check = 1
+                    ind = value.index(item) + 1
+            if check == 1:
+                value = value[:ind]
+                i = value[len(value) - 1][0]
+                i += 2
+                j = value[len(value) - 1][1]
+                j = j + " " + encode_text[:2]
+                value.append([i, j])
+            else:
+                value = []
+                value.append([2, encode_text[:2]])
+
+            count += encoder(encode_text[2:])
 
     return count
 
 
-print(encoder("1213"))
+def mapping(mapper, count):
+    map = {"1": "a", "2": "b", "3": "c", "4": "d",
+           "5": "e", "6": "f", "7": "g", "8": "h", "9": "i",
+           "10": "j", "11": "k", "12": "l", "13": "m", "14": "n",
+           "15": "o", "16": "p", "17": "q", "18": "r", "19": "s", "20": "t",
+           "21": "u", "22": "v", "23": "w", "24": "x", "25": "y", "26": "z"}
+    try:
+        for ref in mapper:
+            print(map[ref], end=" ")
+        print()
+    except KeyError:
+        count -= 1
+    finally:
+        return count
+
+
+value = []
+text = "12121"
+length = len(text)
+print("number of ways", text, "can be decoded", encoder(text))

@@ -18,6 +18,7 @@ for id in id_list:
     email_message = email.message_from_string(raw_email_string)
 
     file_name = email_message['Subject']
+    file_name = file_name[:-1]
 
     i = 0
     if email_message.is_multipart():

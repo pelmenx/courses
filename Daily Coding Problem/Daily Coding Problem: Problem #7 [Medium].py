@@ -24,7 +24,6 @@ def encoder(encode_text, mapper=[]):
             pass
         finally:
             mapper.append(encode_text)
-            print(mapper)
             count = mapping(mapper, 1)
     elif len(encode_text) == 2:
         if int(encode_text) >= 1 and int(encode_text) <= 26:
@@ -34,7 +33,6 @@ def encoder(encode_text, mapper=[]):
                 pass
             finally:
                 mapper.append(encode_text)
-                print(mapper)
                 count = mapping(mapper, 2)
                 try:
                     mapper = value[-1][1].split(" ")
@@ -43,7 +41,6 @@ def encoder(encode_text, mapper=[]):
                 finally:
                     mapper.append(encode_text[0])
                     mapper.append(encode_text[1])
-                    print(mapper)
                     count = mapping(mapper, count)
         else:
             try:
@@ -53,7 +50,6 @@ def encoder(encode_text, mapper=[]):
             finally:
                 mapper.append(encode_text[0])
                 mapper.append(encode_text[1])
-                print(mapper)
                 count = mapping(mapper, 1)
     else:
         if value == []:
@@ -88,7 +84,7 @@ def encoder(encode_text, mapper=[]):
     return count
 
 
-def mapping(mapper, count):
+def mapping(mapper, count, encrypted_text=""):
     map = {"1": "a", "2": "b", "3": "c", "4": "d",
            "5": "e", "6": "f", "7": "g", "8": "h", "9": "i",
            "10": "j", "11": "k", "12": "l", "13": "m", "14": "n",
@@ -96,8 +92,8 @@ def mapping(mapper, count):
            "21": "u", "22": "v", "23": "w", "24": "x", "25": "y", "26": "z"}
     try:
         for ref in mapper:
-            print(map[ref], end=" ")
-        print()
+            encrypted_text += map[ref]
+        print(mapper, encrypted_text)
     except KeyError:
         count -= 1
     finally:
@@ -105,6 +101,6 @@ def mapping(mapper, count):
 
 
 value = []
-text = "12121"
+text = "101"
 length = len(text)
 print("number of ways", text, "can be decoded", encoder(text))

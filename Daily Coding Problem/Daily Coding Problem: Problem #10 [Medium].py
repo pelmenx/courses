@@ -9,3 +9,16 @@
 # --------------------------------------------------------------------------------
 #
 #
+import time
+
+
+def scheduler(function, delay):
+    time.sleep(delay)
+    function()
+
+
+def job():
+    print("do some job")
+
+
+scheduler(job, 3)

@@ -16,3 +16,12 @@
 # --------------------------------------------------------------------------------
 #
 #
+def autocomplete(query, set_string):
+    autocomplete_set = []
+    for string in set_string:
+        if query in string:
+            autocomplete_set.append(string)
+    return autocomplete_set
+
+
+print(autocomplete("de", ["dog", "deer", "deal"]))

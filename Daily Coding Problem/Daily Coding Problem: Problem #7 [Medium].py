@@ -101,6 +101,6 @@ def mapping(mapper, count, encrypted_text=""):
 
 
 value = []
-text = "101"
+text = "111"
 length = len(text)
 print("number of ways", text, "can be decoded", encoder(text))

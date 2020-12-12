@@ -15,3 +15,18 @@
 # --------------------------------------------------------------------------------
 #
 #
+def record(order_id):
+    global log
+    log.append(order_id)
+
+
+def get_last(i):
+    global log
+    print(log[-i:])
+
+
+log = []
+for i in range(0, 10):
+    record(i)
+
+get_last(5)

@@ -43,8 +43,7 @@ def make_roads(graph_tree):
     return roads
 
 
-def check_bottom_leafs(graph_tree, roads):
-    tmp = []
+def check_bottom_leafs(graph_tree, roads, tmp=[]):
     bottom_leafs = {}
     for leaf in graph_tree:
         for road in roads:

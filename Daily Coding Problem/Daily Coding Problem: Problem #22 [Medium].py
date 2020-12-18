@@ -18,5 +18,20 @@
 # --------------------------------------------------------------------------------
 #
 #
-string = "thequickbrownfox"
-set_of_words = ['quick', 'brown', 'the', 'fox']
+def find_words(string, set_of_words):
+    tmp_words = ""
+    words_list = []
+    for letter in string:
+        tmp_words += letter
+        if tmp_words in set_of_words:
+            words_list.append(tmp_words)
+            tmp_words = ""
+    if not words_list:
+        return None
+    else:
+        return words_list
+
+
+print(find_words("thequickbrownfox", ['quick', 'brown', 'the', 'fox']))
+print(find_words("bedbathandbeyond", ['bed', 'bath', 'bedbath', 'and', 'beyond']))
+print(find_words("bedbathandbeyonds", ['quick', 'brown', 'the', 'fox']))

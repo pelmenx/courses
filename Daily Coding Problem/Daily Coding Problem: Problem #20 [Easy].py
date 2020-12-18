@@ -18,3 +18,17 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_intersecting_node(linked_lists_value):
+    checked_nodes_value = []
+    for i in range(0, len(linked_lists_value)):
+        for node in linked_lists_value[i]:
+            if linked_lists_value[i].get(node) not in checked_nodes_value:
+                checked_nodes_value.append(linked_lists_value[i].get(node))
+            else:
+                return linked_lists_value[i].get(node)
+
+
+# linked_lists = [{"a": "b", "b": "c", "c": "d"}, {"a": "b", "b": "c", "c": "d"}]
+linked_lists_value = [{"a": 3, "b": 7, "c": 8, "d": 10}, {"a": 99, "b": 1, "c": 8, "d": 10}]
+
+print(find_intersecting_node(linked_lists_value))

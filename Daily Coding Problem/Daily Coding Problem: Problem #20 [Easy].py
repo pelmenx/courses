@@ -28,7 +28,6 @@ def find_intersecting_node(linked_lists_value):
                 return linked_lists_value[i].get(node)
 
 
-# linked_lists = [{"a": "b", "b": "c", "c": "d"}, {"a": "b", "b": "c", "c": "d"}]
 linked_lists_value = [{"a": 3, "b": 7, "c": 8, "d": 10}, {"a": 99, "b": 1, "c": 8, "d": 10}]
 
 print(find_intersecting_node(linked_lists_value))

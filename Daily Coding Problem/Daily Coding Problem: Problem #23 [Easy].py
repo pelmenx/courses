@@ -27,26 +27,60 @@
 # --------------------------------------------------------------------------------
 #
 #
-def find_way(matrix, start, end):
-    global list
+import sys
+
+
+def find_min_number_of_steps(matrix, start, end):
+    global distance_from_start_dict, neighbour_points_dict
+    try:
+        for neighbour_points in neighbour_points_dict[start]:
+            if distance_from_start_dict[start] + 1 <= distance_from_start_dict[neighbour_points]:
+                distance_from_start_dict[neighbour_points] = distance_from_start_dict[start] + 1
+        tmp = neighbour_points_dict[start]
+        neighbour_points_dict.pop(start)
+        for point in tmp:
+            try:
+                find_min_number_of_steps(matrix, point, end)
+            except KeyError:
+                pass
+        return distance_from_start_dict[end]
+    except KeyError:
+        return "start inside a wall"
+
+
+def find_path(start, end, path):
+    global neighbour_points_dict_copy, distance_from_start_dict
     if start == end:
-        print("FINISH")
-    if start not in list:
-        tmp = []
-        if 0 < start[0] < len(matrix) and 0 < start[1] + 1 < len(matrix[0]) and matrix[start[0]][start[1] + 1] == 0 and (start[0], start[1] + 1) not in list:
-            tmp.append([start[0], start[1] + 1])
-            print("Right")
-        if 0 < start[0] < len(matrix) and 0 < start[1] - 1 < len(matrix[0]) and matrix[start[0]][start[1] - 1] == 0 and (start[0], start[1] - 1) not in list:
-            tmp.append([start[0], start[1] - 1])
-            print("Left")
-        if 0 < start[0] + 1 < len(matrix) and 0 < start[1] < len(matrix[0]) and matrix[start[0] + 1][start[1]] == 0 and (start[0] + 1, start[1]) not in list:
-            tmp.append([start[0] + 1, start[1]])
-            print("Down")
-        if 0 < start[0] - 1 < len(matrix) and 0 < start[1] < len(matrix[0]) and matrix[start[0] - 1][start[1]] == 0 and (start[0] - 1, start[1]) not in list:
-            tmp.append([start[0] - 1, start[1]])
-            print("Up")
-    list[start] = tmp.copy()
-    print(list)
+        path.reverse()
+    for neighbour_points in neighbour_points_dict_copy[end]:
+        if distance_from_start_dict[neighbour_points] == distance_from_start_dict[end] - 1:
+            path.append(neighbour_points)
+            return find_path(start, neighbour_points, path)
+    return path
+
+
+def make_graphs(matrix, start):
+    neighbour_points_dict = {}
+    for i in range(0, len(matrix)):
+        for j in range(0, len(matrix[i])):
+            tmp = []
+            if matrix[i][j] == 0:
+                if 0 <= j + 1 < len(matrix[0]) and matrix[i][j + 1] == 0:
+                    tmp.append((i, j + 1))
+                if 0 <= j - 1 < len(matrix[0]) and matrix[i][j - 1] == 0:
+                    tmp.append((i, j - 1))
+                if 0 <= i + 1 < len(matrix[0]) and matrix[i + 1][j] == 0:
+                    tmp.append((i + 1, j))
+                if 0 <= i - 1 < len(matrix[0]) and matrix[i - 1][j] == 0:
+                    tmp.append((i - 1, j))
+                neighbour_points_dict[(i, j)] = tmp
+    distance_from_start_dict = {}
+    for point in neighbour_points_dict:
+        if point == start:
+            distance_from_start_dict[point] = 0
+        else:
+            distance_from_start_dict[point] = sys.maxsize
+    return neighbour_points_dict, distance_from_start_dict
 
 
 matrix = [[0, 0, 0, 0],
@@ -54,14 +88,20 @@ matrix = [[0, 0, 0, 0],
           [0, 0, 0, 0],
           [0, 0, 0, 0]]
 
-matri1 = [[0, 0, 0, 1],
-          [1, 1, 0, 1],
-          [0, 0, 0, 1],
-          [1, 1, 1, 1]]
+matri1 = [[0, 0, 0, 0],
+          [0, 1, 1, 1],
+          [0, 1, 0, 0],
+          [0, 1, 0, 0]]
 
-start = (2, 2)
+start = (3, 0)
 end = (0, 0)
 
-list = {}
+neighbour_points_dict, distance_from_start_dict = make_graphs(matrix, start)
+neighbour_points_dict_copy = neighbour_points_dict.copy()
 
-find_way(matri1, start, end)
+min_distance = find_min_number_of_steps(matrix, start, end)
+if min_distance == sys.maxsize or min_distance == "start inside a wall":
+    print("there is no way")
+else:
+    print(min_distance)
+    print(find_path(start, end, path=[end]))

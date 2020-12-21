@@ -22,3 +22,21 @@
 # --------------------------------------------------------------------------------
 #
 #
+def regexp_validator(regexp, string):
+    #print(regexp, string)
+    if regexp[0] != "*":
+        if len(regexp) == 1:
+            if len(string) == 1:
+                return True
+            else:
+                return False
+        if regexp[0] == string[0] or regexp[0] == ".":
+            return regexp_validator(regexp[1:], string[1:])
+    else:
+        pass
+
+
+print(regexp_validator("ra.", "ray"))
+print(regexp_validator("ra.", "raymond"))
+print(regexp_validator(".*at", "chat"))
+print(regexp_validator(".*at", "chats"))

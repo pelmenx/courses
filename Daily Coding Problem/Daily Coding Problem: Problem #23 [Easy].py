@@ -32,20 +32,19 @@ import sys
 
 def find_min_number_of_steps(matrix, start, end):
     global distance_from_start_dict, neighbour_points_dict
-    try:
-        for neighbour_points in neighbour_points_dict[start]:
-            if distance_from_start_dict[start] + 1 <= distance_from_start_dict[neighbour_points]:
-                distance_from_start_dict[neighbour_points] = distance_from_start_dict[start] + 1
-        tmp = neighbour_points_dict[start]
-        neighbour_points_dict.pop(start)
-        for point in tmp:
-            try:
-                find_min_number_of_steps(matrix, point, end)
-            except KeyError:
-                pass
-        return distance_from_start_dict[end]
-    except KeyError:
+    if start not in neighbour_points_dict:
         return "start inside a wall"
+    for neighbour_points in neighbour_points_dict[start]:
+        if distance_from_start_dict[start] + 1 <= distance_from_start_dict[neighbour_points]:
+            distance_from_start_dict[neighbour_points] = distance_from_start_dict[start] + 1
+    tmp = neighbour_points_dict[start]
+    neighbour_points_dict.pop(start)
+    for point in tmp:
+        try:
+            find_min_number_of_steps(matrix, point, end)
+        except KeyError:
+            pass
+    return distance_from_start_dict[end]
 
 
 def find_path(start, end, path):
@@ -88,10 +87,6 @@ matrix = [[0, 0, 0, 0],
           [0, 0, 0, 0],
           [0, 0, 0, 0]]
 
-matri1 = [[0, 0, 0, 0],
-          [0, 1, 1, 1],
-          [0, 1, 0, 0],
-          [0, 1, 0, 0]]
 
 start = (3, 0)
 end = (0, 0)
@@ -100,7 +95,9 @@ neighbour_points_dict, distance_from_start_dict = make_graphs(matrix, start)
 neighbour_points_dict_copy = neighbour_points_dict.copy()
 
 min_distance = find_min_number_of_steps(matrix, start, end)
-if min_distance == sys.maxsize or min_distance == "start inside a wall":
+if min_distance == "start inside a wall":
+    print(min_distance)
+elif min_distance == sys.maxsize:
     print("there is no way")
 else:
     print(min_distance)

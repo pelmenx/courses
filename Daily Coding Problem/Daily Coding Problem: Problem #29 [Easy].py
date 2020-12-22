@@ -15,3 +15,25 @@
 # --------------------------------------------------------------------------------
 #
 #
+def encoding(string):
+    tmp_list = []
+    list = []
+    for letter in string:
+        if not(not tmp_list):
+            if letter != tmp_list[-1]:
+                list.append((len(tmp_list), tmp_list[-1]))
+                tmp_list = []
+        tmp_list.append(letter)
+    list.append((len(tmp_list), tmp_list[-1]))
+    encripted_text = ""
+    for groups in list:
+        for item in groups:
+            encripted_text += str(item)
+    return encripted_text
+
+
+def decoding(string):
+    pass
+
+
+print(encoding("AAAABBBCCDAA"))

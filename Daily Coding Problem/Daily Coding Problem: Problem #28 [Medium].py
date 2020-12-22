@@ -3,7 +3,7 @@
 # This problem was asked by Palantir.
 #
 # Write an algorithm to justify text. Given a sequence of words and an integer
-# line length k, return a list of strings which represents each line, fully
+# line length k, return a list of list[i]s which represents each line, fully
 # justified.
 #
 # More specifically, you should have as many words as possible in each line. There
@@ -28,3 +28,50 @@
 # --------------------------------------------------------------------------------
 #
 #
+def algorithm_to_justify_text(list_of_words, k):
+    tmp_list = ""
+    list = []
+    for word in list_of_words:
+        if not tmp_list:
+            tmp_list += word
+        else:
+            if len(tmp_list + " " + word) <= k:
+                tmp_list += " " + word
+            else:
+                list.append(tmp_list)
+                tmp_list = word
+    list.append(tmp_list)
+    print(list)
+    list = add_spaces(list, k)
+    return list
+
+
+def add_spaces(list, k):
+    for i in range(len(list)):
+        print(len(list[i]), k - len(list[i]), list[i].count(" "))
+        if list[i].count(" ") == 0:
+            string = list[i] + " " * (k - len(list[i]))
+            list[i] = string
+
+        else:
+            spaces_list = []
+            string_list = []
+            for j in range(0, len(list[i])):
+                if list[i][j] == " ":
+                    spaces_list.append(j)
+                string_list.append(list[i][j])
+            counter = k - len(list[i])
+            while counter > 0:
+                for coordinate in spaces_list:
+                    string_list.insert(coordinate, " ")
+                    for j in range(0, len(spaces_list)):
+                        spaces_list[j] += 1
+                    counter -= 1
+                    if counter == 0:
+                        list[i] = ''.join(map(str, string_list))
+                        break
+
+    return list
+
+
+print(algorithm_to_justify_text(["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog", "qwertyuiop"], 16))

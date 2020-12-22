@@ -13,3 +13,33 @@
 # --------------------------------------------------------------------------------
 #
 #
+def check_brackets(string):
+    list = []
+    for brackets in string:
+        if brackets == "(" or brackets == "{" or brackets == "[":
+            list.append(brackets)
+        else:
+            if brackets == ")":
+                if list[-1] == "(":
+                    list.pop()
+                else:
+                    return False
+            elif brackets == "}":
+                if list[-1] == "{":
+                    list.pop()
+                else:
+                    return False
+            elif brackets == "]":
+                if list[-1] == "[":
+                    list.pop()
+                else:
+                    return False
+    if not list:
+        return True
+    else:
+        return False
+
+
+print(check_brackets("([])[]({})"))
+print(check_brackets("([)]"))
+print(check_brackets("((()"))

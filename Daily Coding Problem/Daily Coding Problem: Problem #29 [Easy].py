@@ -47,6 +47,8 @@ def decoding(string):
 
 plain_text = "AAAABBBCCDAA"
 encripted_text = encoding(plain_text)
-print(encripted_text)
 decrypted_text = decoding(encripted_text)
-print(decrypted_text)
+if plain_text == decrypted_text:
+    print(True)
+else:
+    print(False)

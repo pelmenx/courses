@@ -21,3 +21,33 @@
 # --------------------------------------------------------------------------------
 #
 #
+def capacity_trapped_water(input):
+    water_capacity = 0
+    left_point = 0
+    right_point = len(input) - 1
+    left_max_height = 0
+    right_max_height = 0
+    while left_point < right_point:
+        if input[left_point] < input[right_point]:
+            if input[left_point] > left_max_height:
+                left_max_height = input[left_point]
+            else:
+                water_capacity += left_max_height - input[left_point]
+            left_point += 1
+        else:
+            if input[right_point] > right_max_height:
+                right_max_height = input[right_point]
+            else:
+                water_capacity += right_max_height - input[right_point]
+            right_point -= 1
+    return water_capacity
+
+
+print(capacity_trapped_water([1, 3, 0, 1, 3, 10, 0, 10, 0, 5]))
+print(capacity_trapped_water([3, 0, 1, 3, 0, 5]))
+print(capacity_trapped_water([3, 0, 1, 3]))
+print(capacity_trapped_water([3, 0, 1]))
+print(capacity_trapped_water([1, 3, 0]))
+print(capacity_trapped_water([1, 3]))
+print(capacity_trapped_water([1]))
+print(capacity_trapped_water([]))

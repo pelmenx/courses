@@ -33,7 +33,20 @@ def encoding(string):
 
 
 def decoding(string):
-    pass
+    tmp_list = []
+    list = []
+    for letter in string:
+        if letter.isalpha():
+            list.append(letter * int(''.join(map(str, tmp_list))))
+            tmp_list = []
+        else:
+            tmp_list.append(letter)
+    list = ''.join(map(str, list))
+    return list
 
 
-print(encoding("AAAABBBCCDAA"))
+plain_text = "AAAABBBCCDAA"
+encripted_text = encoding(plain_text)
+print(encripted_text)
+decrypted_text = decoding(encripted_text)
+print(decrypted_text)

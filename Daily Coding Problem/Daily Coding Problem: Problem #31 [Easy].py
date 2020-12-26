@@ -13,3 +13,22 @@
 # --------------------------------------------------------------------------------
 #
 #
+def distance_between_two_strings(string1, string2):
+    print(string1, string2)
+    if string1 == string2:
+        return 0
+    elif not string1:
+        return len(string2)
+    elif not string2:
+        return len(string1)
+
+    if string1[0] == string2[0]:
+        return distance_between_two_strings(string1[1:], string2[1:])
+
+    return 1 + min(
+        distance_between_two_strings(string1[1:], string2),      # deletion from string1
+        distance_between_two_strings(string1, string2[1:]),      # addition to string1
+        distance_between_two_strings(string1[1:], string2[1:]))  # modification to string1
+
+
+print(distance_between_two_strings("asd", "qwe"))

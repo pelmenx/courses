@@ -18,3 +18,65 @@
 # --------------------------------------------------------------------------------
 #
 #
+def make_palindrome(string):
+    if len(string) == 0:
+        return False
+    list = find_partician(string)
+    palindromes = []
+    for substring in list:
+        if string.startswith(substring) is True:
+            adding = string[len(substring):]
+            palindromes.append(adding[::-1] + substring + adding)
+        else:
+            adding = string[:len(string) - len(substring)]
+            palindromes.append(adding + substring + adding[::-1])
+    if len(palindromes) == 1:
+        return palindromes[0]
+    else:
+        alphabetically_min_palindrome = palindromes[0]
+        for i in range(1, len(palindromes)):
+            if palindromes[i] < alphabetically_min_palindrome:
+                alphabetically_min_palindrome = palindromes[i]
+        return alphabetically_min_palindrome
+
+
+def find_partician(string):
+    list = []
+    for i in range(1, len(string) + 1):
+        list.append(string[:i])
+        list.append(string[i:])
+    max_length = 0
+    for i in range(len(list) - 1, -1, -1):
+        if len(list[i]) != 1 and len(list[i]) != 0:
+            if len(list[i]) % 2 == 0:
+                s1 = list[i][:int(len(list[i]) / 2)]
+                s2 = list[i][int(len(list[i]) / 2):]
+                s2 = s2[::-1]
+                if s1 != s2:
+                    list.pop(i)
+                else:
+                    if len(list[i]) > max_length:
+                        max_length = len(list[i])
+            else:
+                s1 = list[i][:int(len(list[i]) / 2)]
+                s2 = list[i][int(len(list[i]) / 2) + 1:]
+                s2 = s2[::-1]
+                if s1 != s2:
+                    list.pop(i)
+                else:
+                    if len(list[i]) > max_length:
+                        max_length = len(list[i])
+        elif len(list[i]) == 0:
+            list.pop(i)
+    for i in range(len(list) - 1, -1, -1):
+        if len(list[i]) < max_length:
+            list.pop(i)
+    return list
+
+
+print(make_palindrome("google"))
+print(make_palindrome("googleel"))
+print(make_palindrome("g"))
+print(make_palindrome("ww"))
+print(make_palindrome("abc"))
+print(make_palindrome(""))

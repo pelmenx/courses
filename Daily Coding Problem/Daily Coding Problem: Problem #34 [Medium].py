@@ -30,14 +30,11 @@ def make_palindrome(string):
         else:
             adding = string[:len(string) - len(substring)]
             palindromes.append(adding + substring + adding[::-1])
-    if len(palindromes) == 1:
-        return palindromes[0]
-    else:
-        alphabetically_min_palindrome = palindromes[0]
-        for i in range(1, len(palindromes)):
-            if palindromes[i] < alphabetically_min_palindrome:
-                alphabetically_min_palindrome = palindromes[i]
-        return alphabetically_min_palindrome
+    alphabetically_min_palindrome = palindromes[0]
+    for i in range(1, len(palindromes)):
+        if palindromes[i] < alphabetically_min_palindrome:
+            alphabetically_min_palindrome = palindromes[i]
+    return alphabetically_min_palindrome
 
 
 def find_partician(string):

@@ -24,3 +24,19 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_median(sequence):
+    for i in range(0, len(sequence)):
+        tmp = sequence[:i + 1]
+        tmp.sort()
+        if i == 0:
+            print(tmp[0])
+        elif (i + 1) % 2 == 0:
+            if ((tmp[int(len(tmp) / 2)] + tmp[int(len(tmp) / 2) - 1]) / 2) == int((tmp[int(len(tmp) / 2)] + tmp[int(len(tmp) / 2) - 1]) / 2):
+                print(int((tmp[int(len(tmp) / 2)] + tmp[int(len(tmp) / 2) - 1]) / 2))
+            else:
+                print((tmp[int(len(tmp) / 2)] + tmp[int(len(tmp) / 2) - 1]) / 2)
+        elif (i + 1) % 2 == 1:
+            print(tmp[int(len(tmp) / 2)])
+
+
+find_median([2, 1, 5, 7, 2, 0, 5])

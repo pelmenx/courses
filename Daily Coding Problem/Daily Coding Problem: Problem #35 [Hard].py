@@ -15,3 +15,35 @@
 # --------------------------------------------------------------------------------
 #
 #
+def segregation(list):
+    pointer = 0
+    right = len(list) - 1
+    left = 0
+    while pointer <= right:
+        if list[pointer] == "R":
+            if pointer == left:
+                pointer += 1
+            else:
+                tmp_1 = list[pointer]
+                tmp_2 = list[left]
+                list[pointer] = tmp_2
+                list[left] = tmp_1
+                left += 1
+        elif list[pointer] == "B":
+            if pointer == right:
+                pointer += 1
+            else:
+                tmp_1 = list[pointer]
+                tmp_2 = list[right]
+                list[pointer] = tmp_2
+                list[right] = tmp_1
+                right -= 1
+        else:
+            pointer += 1
+    return list
+
+
+print(segregation(['G', 'R']))
+print(segregation(['G', 'B', 'R']))
+print(segregation(['B', 'G', 'R']))
+print(segregation(['G', 'B', 'R', 'R', 'B', 'R', 'G']))

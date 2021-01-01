@@ -35,6 +35,6 @@ def queens_position(n, matrix=[], counter=None):
                             matrix[i][k] = 0
                             matrix[k][j] = 0
         print(matrix)
-        print
+        print()
 
 queens_position(8)

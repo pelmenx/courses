@@ -14,31 +14,33 @@
 import copy
 
 
-def queens_position(n, matrix=None, counter=None):
-    if matrix is None:
-        matrix = []
-    if not matrix:
-        matrix = []
-        for i in range(n):
-            matrix.append([])
-            for j in range(n):
-                matrix[i].append(None)
-        tmp_matrix = copy.deepcopy(matrix)
-        counter = 0
-        return queens_position(n, tmp_matrix, counter)
-    else:
-        for i in range(len(matrix)):
-            for j in range(len(matrix[i])):
-                if matrix[i][j] is None:
-                    matrix[i][j] = 1
-                    counter += 1
-                    for k in range(len(matrix[i])):
-                        if k != j:
-                            matrix[i][k] = 0
-                            matrix[k][j] = 0
-                    for l in range(0,min(j,i)):
+def queens_position(n):
+    matrix = []
+    for i in range(n):
+        matrix.append([])
+        for j in range(n):
+            matrix[i].append(5)
 
-        for item in matrix:
-            print(item)
+    tmp_matrix = copy.deepcopy(matrix)
+    counter = 0
+    for i in range(0, len(tmp_matrix)):
+        for j in range(0, len(tmp_matrix[i])):
+            if tmp_matrix[i][j] == 5:
+                counter += 1
+                for k in range(len(tmp_matrix[i])):
+                    tmp_matrix[i][k] = 0
+                    tmp_matrix[k][j] = 0
+                start = [i - min(i, j), j - min(i, j)]
+                for m in range(0, n - max(start)):
+                    tmp_matrix[start[0] + m][start[1] + m] = 0
+                for q in range(len(tmp_matrix)):
+                    for w in range(len(tmp_matrix[i])):
+                        if q + w == i + j:
+                            tmp_matrix[q][w] = 0
+                tmp_matrix[i][j] = 1
+            for item in tmp_matrix:
+                print(item)
+            print("----------------------------", i, j, counter)
 
-queens_position(8)
+
+queens_position(3)

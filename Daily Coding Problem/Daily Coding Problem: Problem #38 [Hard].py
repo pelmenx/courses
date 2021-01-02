@@ -14,7 +14,9 @@
 import copy
 
 
-def queens_position(n, matrix=[], counter=None):
+def queens_position(n, matrix=None, counter=None):
+    if matrix is None:
+        matrix = []
     if not matrix:
         matrix = []
         for i in range(n):
@@ -34,7 +36,9 @@ def queens_position(n, matrix=[], counter=None):
                         if k != j:
                             matrix[i][k] = 0
                             matrix[k][j] = 0
-        print(matrix)
-        print()
+                    for l in range(0,min(j,i)):
+
+        for item in matrix:
+            print(item)
 
 queens_position(8)

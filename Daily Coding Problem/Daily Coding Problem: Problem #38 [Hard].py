@@ -14,33 +14,35 @@
 import copy
 
 
-def queens_position(n):
-    matrix = []
-    for i in range(n):
-        matrix.append([])
-        for j in range(n):
-            matrix[i].append(5)
+def queens_position(n, matrix=None, counter=0, pointer=0, result=0):
+    if matrix is None:
+        matrix = []
+        for i in range(n):
+            matrix.append([])
+            for j in range(n):
+                matrix[i].append(5)
+    if counter == n:
+        return 1
+    for j in range(len(matrix[pointer])):
+        tmp_matrix = copy.deepcopy(matrix)
+        if tmp_matrix[pointer][j] == 5:
+            counter += 1
+            for k in range(len(tmp_matrix[pointer])):
+                tmp_matrix[pointer][k] = 0
+                tmp_matrix[k][j] = 0
+            start = [pointer - min(pointer, j), j - min(pointer, j)]
+            for m in range(n - max(start)):
+                tmp_matrix[start[0] + m][start[1] + m] = 0
+            for q in range(len(tmp_matrix)):
+                for w in range(len(tmp_matrix[pointer])):
+                    if q + w == pointer + j:
+                        tmp_matrix[q][w] = 0
+            tmp_matrix[pointer][j] = 1
+            pointer += 1
+            result += queens_position(n, tmp_matrix, counter, pointer)
+            counter -= 1
+            pointer -= 1
+    return result
 
-    tmp_matrix = copy.deepcopy(matrix)
-    counter = 0
-    for i in range(0, len(tmp_matrix)):
-        for j in range(0, len(tmp_matrix[i])):
-            if tmp_matrix[i][j] == 5:
-                counter += 1
-                for k in range(len(tmp_matrix[i])):
-                    tmp_matrix[i][k] = 0
-                    tmp_matrix[k][j] = 0
-                start = [i - min(i, j), j - min(i, j)]
-                for m in range(0, n - max(start)):
-                    tmp_matrix[start[0] + m][start[1] + m] = 0
-                for q in range(len(tmp_matrix)):
-                    for w in range(len(tmp_matrix[i])):
-                        if q + w == i + j:
-                            tmp_matrix[q][w] = 0
-                tmp_matrix[i][j] = 1
-            for item in tmp_matrix:
-                print(item)
-            print("----------------------------", i, j, counter)
 
-
-queens_position(3)
+print(queens_position(8))

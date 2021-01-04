@@ -14,15 +14,17 @@
 import copy
 
 
-def queens_position(n, matrix=None, counter=0, pointer=0, result=0):
+def queens_position(n, matrix=None, counter=0, pointer=0):
     if matrix is None:
         matrix = []
         for i in range(n):
             matrix.append([])
             for j in range(n):
                 matrix[i].append(5)
+        return queens_position(n, matrix)
     if counter == n:
         return 1
+    result = 0
     for j in range(len(matrix[pointer])):
         tmp_matrix = copy.deepcopy(matrix)
         if tmp_matrix[pointer][j] == 5:

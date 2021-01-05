@@ -27,3 +27,116 @@
 # --------------------------------------------------------------------------------
 #
 #
+import copy
+import sys
+
+
+def Conways_Game_of_Life(life_cells_list, iteration, current_itteration=0):
+    if not life_cells_list:
+        for i in range(current_itteration, iteration + 1):
+            print([])
+            print()
+        return
+    bottom = 0
+    right = 0
+    top = sys.maxsize
+    left = sys.maxsize
+    for coordinates in life_cells_list:
+        if coordinates[0] > bottom:
+            bottom = coordinates[0]
+        if coordinates[0] < top:
+            top = coordinates[0]
+        if coordinates[1] > right:
+            right = coordinates[1]
+        if coordinates[1] < left:
+            left = coordinates[1]
+    board = []
+    tmp_life_cells_list = []
+    for i in range(top, bottom + 2):
+        board.append([])
+        for j in range(left, right + 2):
+            if [i, j] in life_cells_list:
+                board[i - top].append("*")
+                if top != 0 and left != 0:
+                    tmp_life_cells_list.append([i - top + 1, j - left + 1])
+                if top != 0 and left == 0:
+                    tmp_life_cells_list.append([i - top + 1, j - left])
+                if top == 0 and left != 0:
+                    tmp_life_cells_list.append([i - top, j - left + 1])
+                if top == 0 and left == 0:
+                    tmp_life_cells_list.append([i - top, j - left])
+            else:
+                board[i - top].append(".")
+    if top != 0 and left != 0:
+        tmp_board = [["."] * len(board[0])]
+        tmp_board.extend(board)
+        board = copy.deepcopy(tmp_board)
+        tmp_board.clear()
+        for line in board:
+            line.insert(0, ".")
+        for line in board[1:-1]:
+            print(line[1:-1])
+        print()
+    if top != 0 and left == 0:
+        tmp_board = [["."] * len(board[0])]
+        tmp_board.extend(board)
+        board = copy.deepcopy(tmp_board)
+        tmp_board.clear()
+        for line in board[1:-1]:
+            print(line[-1])
+        print()
+    if top == 0 and left != 0:
+        for line in board:
+            line.insert(0, ".")
+        for line in board[:-1]:
+            print(line[1:-1])
+        print()
+    if top == 0 and left == 0:
+        for line in board[:-1]:
+            print(line[:-1])
+        print()
+    if iteration == current_itteration:
+        return
+    life_cells_list = copy.deepcopy(tmp_life_cells_list)
+    tmp_life_cells_list.clear()
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if [i, j] in life_cells_list:
+                counter = 0
+                for k in range(i - 1, i + 2):
+                    if k >= 0 and k <= len(board):
+                        for x in range(j - 1, j + 2):
+                            if x >= 0 and x <= len(board[i]):
+                                if [k, x] in life_cells_list and [k, x] != [i, j]:
+                                    counter += 1
+                if counter == 2 or counter == 3:
+                    if top != 0 and left != 0:
+                        tmp_life_cells_list.append([i + top - 1, j + left - 1])
+                    if top != 0 and left == 0:
+                        tmp_life_cells_list.append([i + top - 1, j + left])
+                    if top == 0 and left != 0:
+                        tmp_life_cells_list.append([i + top, j + left - 1])
+                    if top == 0 and left == 0:
+                        tmp_life_cells_list.append([i + top, j + left])
+            else:
+                counter = 0
+                for k in range(i - 1, i + 2):
+                    if k >= 0 and k <= len(board):
+                        for x in range(j - 1, j + 2):
+                            if x >= 0 and x <= len(board[i]):
+                                if [k, x] in life_cells_list:
+                                    counter += 1
+                if counter == 3:
+                    if top != 0 and left != 0:
+                        tmp_life_cells_list.append([i + top - 1, j + left - 1])
+                    if top != 0 and left == 0:
+                        tmp_life_cells_list.append([i + top - 1, j + left])
+                    if top == 0 and left != 0:
+                        tmp_life_cells_list.append([i + top, j + left - 1])
+                    if top == 0 and left == 0:
+                        tmp_life_cells_list.append([i + top, j + left])
+
+    return Conways_Game_of_Life(tmp_life_cells_list, iteration, current_itteration + 1)
+
+
+Conways_Game_of_Life([[0, 0], [0, 4], [0, 6], [1, 0], [1, 1], [1, 5], [2, 5], [2, 6], [2, 7]], 8)

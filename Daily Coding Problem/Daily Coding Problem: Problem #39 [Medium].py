@@ -32,8 +32,12 @@ import sys
 
 
 def Conways_Game_of_Life(life_cells_list, iteration, current_itteration=0):
+    if iteration < 0:
+        print("iteration parameter should be non-negative")
+        return
     if not life_cells_list:
         for i in range(current_itteration, iteration + 1):
+            print("current_itteration", i)
             print([])
             print()
         return
@@ -67,34 +71,36 @@ def Conways_Game_of_Life(life_cells_list, iteration, current_itteration=0):
                     tmp_life_cells_list.append([i - top, j - left])
             else:
                 board[i - top].append(".")
-    if top != 0 and left != 0:
+    if top != 0:
         tmp_board = [["."] * len(board[0])]
         tmp_board.extend(board)
         board = copy.deepcopy(tmp_board)
         tmp_board.clear()
-        for line in board:
-            line.insert(0, ".")
-        for line in board[1:-1]:
-            print(line[1:-1])
-        print()
-    if top != 0 and left == 0:
-        tmp_board = [["."] * len(board[0])]
-        tmp_board.extend(board)
-        board = copy.deepcopy(tmp_board)
-        tmp_board.clear()
-        for line in board[1:-1]:
-            print(line[-1])
-        print()
-    if top == 0 and left != 0:
-        for line in board:
-            line.insert(0, ".")
-        for line in board[:-1]:
-            print(line[1:-1])
-        print()
-    if top == 0 and left == 0:
-        for line in board[:-1]:
-            print(line[:-1])
-        print()
+        if left != 0:
+            for line in board:
+                line.insert(0, ".")
+            print("current_itteration", current_itteration)
+            for line in board[1:-1]:
+                print(line[1:-1])
+            print()
+        else:
+            print("current_itteration", current_itteration)
+            for line in board[1:-1]:
+                print(line[-1])
+            print()
+    else:
+        if left != 0:
+            for line in board:
+                line.insert(0, ".")
+            print("current_itteration", current_itteration)
+            for line in board[:-1]:
+                print(line[1:-1])
+            print()
+        else:
+            print("current_itteration", current_itteration)
+            for line in board[:-1]:
+                print(line[:-1])
+            print()
     if iteration == current_itteration:
         return
     life_cells_list = copy.deepcopy(tmp_life_cells_list)

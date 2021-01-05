@@ -14,3 +14,25 @@
 # --------------------------------------------------------------------------------
 #
 #
+
+# 0b1101
+# 0b11110
+# 0b10011
+# 0b11110
+def find_uniqe_integer(arr):
+    result_arr = [0] * 8
+    for num in arr:
+        for i in range(8):
+            bit = num >> i & 1
+            result_arr[i] = (result_arr[i] + bit) % 3
+        print(result_arr)
+        print("------------------------")
+    result = 0
+    for i, bit in enumerate(result_arr):
+        if bit:
+            result += 2 ** i
+
+    return result
+
+
+print(find_uniqe_integer([13, 19, 13, 13]))

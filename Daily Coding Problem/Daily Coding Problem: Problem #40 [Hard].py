@@ -14,25 +14,38 @@
 # --------------------------------------------------------------------------------
 #
 #
-
-# 0b1101
-# 0b11110
-# 0b10011
-# 0b11110
 def find_uniqe_integer(arr):
-    result_arr = [0] * 8
-    for num in arr:
-        for i in range(8):
-            bit = num >> i & 1
-            result_arr[i] = (result_arr[i] + bit) % 3
-        print(result_arr)
-        print("------------------------")
+    a = base_2(0)
+    for integer in arr:
+        ineger_base_2 = base_2(integer)
+        if len(a) < len(ineger_base_2):
+            for i in range(len(ineger_base_2) - len(a)):
+                a.append(0)
+        if len(a) > len(ineger_base_2):
+            for i in range(len(a) - len(ineger_base_2)):
+                ineger_base_2.append(0)
+        tmp = []
+        for i in range(len(a)):
+            tmp.append((a[i] + ineger_base_2[i]) % 3)
+        a = tmp.copy()
+        tmp.clear()
     result = 0
-    for i, bit in enumerate(result_arr):
-        if bit:
-            result += 2 ** i
-
+    for i in range(len(a) - 1, -1, -1):
+        result += a[i] * 2 ** i
     return result
 
 
+def base_2(number, base_2_integer=[]):
+    if number < 2:
+        base_2_integer.append(number)
+        tmp = base_2_integer.copy()
+        base_2_integer.clear()
+        return tmp
+    dev = int(number / 2)
+    modulo = number % 2
+    base_2_integer.append(modulo)
+    return base_2(dev)
+
+
+print(find_uniqe_integer([6, 1, 3, 3, 3, 6, 6]))
 print(find_uniqe_integer([13, 19, 13, 13]))

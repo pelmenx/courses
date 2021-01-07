@@ -16,3 +16,14 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_subset_up_to_k(set, k, path=[]):
+    if not k:
+        return path
+    for i, item in enumerate(set):
+        subset = find_subset_up_to_k(set[:i] + set[i + 1:], k - item, path + [item])
+        if subset:
+            return subset
+    return None
+
+
+print(find_subset_up_to_k([12, 1, 61, 5, 9, 2], 24))

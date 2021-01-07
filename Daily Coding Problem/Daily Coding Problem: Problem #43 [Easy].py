@@ -16,3 +16,36 @@
 # --------------------------------------------------------------------------------
 #
 #
+class Stack:
+    def __init__(self):
+        self.stack = []
+        self.max_value = []
+
+    def push(self, value):
+        self.stack.append(value)
+        if not self.max_value or value >= self.max_value[-1]:
+            self.max_value.append(value)
+
+    def pop(self):
+        if not self.stack:
+            raise Exception
+        if self.stack[-1] == self.max_value[-1]:
+            self.max_value.pop()
+        self.stack.pop()
+
+    def max(self):
+        if not self.stack:
+            return None
+        else:
+            return self.max_value[-1]
+
+
+s = Stack()
+s.push(1)
+s.push(3)
+s.push(2)
+s.push(3)
+s.push(2)
+s.pop()
+s.pop()
+print(s.max())

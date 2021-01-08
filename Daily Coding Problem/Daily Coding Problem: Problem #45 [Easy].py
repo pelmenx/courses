@@ -10,3 +10,20 @@
 # --------------------------------------------------------------------------------
 #
 #
+from random import randint
+
+
+def rand5():
+    return randint(1, 5)
+
+
+def rand7():
+    result = rand5() * 5 + rand5() - 5
+    if result < 22:
+        result = result % 7 + 1
+    else:
+        return rand7()
+    return result
+
+
+print(rand7())

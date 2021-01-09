@@ -16,14 +16,14 @@
 #
 def maximum_profit(array):
     max_profit = 0
-    min_cost = array[0]
+    min_sell_price = array[0]
     for i in range(1, len(array)):
-        if array[i] < min_cost:
-            min_cost = array[i]
+        if array[i] < min_sell_price:
+            min_sell_price = array[i]
         else:
-            if array[i] - min_cost > max_profit:
-                max_profit = array[i] - min_cost
+            if array[i] - min_sell_price > max_profit:
+                max_profit = array[i] - min_sell_price
     return max_profit
 
 
-print(maximum_profit([9, 11, 8, 5, 7, 10]))
+print(maximum_profit([9, 11, 8, 5, 7, 10, 2, 6]))

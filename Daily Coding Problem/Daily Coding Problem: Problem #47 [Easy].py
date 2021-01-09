@@ -15,6 +15,8 @@
 #
 #
 def maximum_profit(array):
+    if not array:
+        return None
     max_profit = 0
     min_sell_price = array[0]
     for i in range(1, len(array)):
@@ -26,4 +28,4 @@ def maximum_profit(array):
     return max_profit
 
 
-print(maximum_profit([9, 11, 8, 5, 7, 10, 2, 6]))
+print(maximum_profit([9, 11, 8, 5, 7, 10]))

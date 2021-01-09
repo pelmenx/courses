@@ -14,3 +14,16 @@
 # --------------------------------------------------------------------------------
 #
 #
+def maximum_profit(array):
+    max_profit = 0
+    min_cost = array[0]
+    for i in range(1, len(array)):
+        if array[i] < min_cost:
+            min_cost = array[i]
+        else:
+            if array[i] - min_cost > max_profit:
+                max_profit = array[i] - min_cost
+    return max_profit
+
+
+print(maximum_profit([9, 11, 8, 5, 7, 10]))

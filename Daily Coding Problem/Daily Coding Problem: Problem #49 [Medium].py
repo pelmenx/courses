@@ -17,3 +17,16 @@
 # --------------------------------------------------------------------------------
 #
 #
+def max_subset(set):
+    if not set:
+        return 0
+    current_max = 0
+    final_max = 0
+    for item in set:
+        current_max = max(item, current_max + item)
+        final_max = max(final_max, current_max)
+    return final_max
+
+
+print(max_subset([34, -50, 42, 14, -5, 86]))
+print(max_subset([-5, -1, -8, -9]))

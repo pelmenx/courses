@@ -14,3 +14,20 @@
 # --------------------------------------------------------------------------------
 #
 #
+from random import randint
+
+
+def shuffle():
+    deck = [i for i in range(52)]
+    for i, item in enumerate(deck):
+        swap_item = rand(len(deck) - 1, i)
+        deck[i], deck[swap_item] = deck[swap_item], deck[i]
+    return deck
+
+
+def rand(k, i):
+    random = randint(0, k)
+    return random
+
+
+print(shuffle())

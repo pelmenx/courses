@@ -36,7 +36,11 @@ class URL_shortener():
         while(id > 0):
             short_url += self.map[id % 62]
             id //= 62
-        short_url = short_url.rjust(6, self.map[ord(url[-1]) % 62])
+        if len(short_url) < 6:
+            while len(short_url) < 6:
+                short_url = short_url + self.map[ord(short_url[-1]) % 62]
+        else:
+            short_url = short_url[:6]
         self.hash_table[short_url] = url
         return short_url
 
@@ -46,6 +50,7 @@ class URL_shortener():
 
 short = URL_shortener()
 short_url = short.shorten("abc")
+print(short_url)
 restored_url = short.restore(short_url)
 restored_url1 = short.restore("abcdfg")
 print(restored_url)

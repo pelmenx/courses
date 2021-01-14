@@ -10,3 +10,21 @@
 # --------------------------------------------------------------------------------
 #
 #
+
+def can_color_graph(adjacency_matrix, k):
+    max_adjacencies = 0
+    for row in adjacency_matrix:
+        max_adjacencies = max(max_adjacencies, sum(row))
+
+    return k > max_adjacencies
+
+
+adjacency_matrix_1 = [
+    [0, 1, 0, 0, 1, 0],
+    [1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 0],
+    [0, 0, 1, 0, 1, 1],
+    [1, 1, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0],
+]
+print(can_color_graph(adjacency_matrix_1, 3))

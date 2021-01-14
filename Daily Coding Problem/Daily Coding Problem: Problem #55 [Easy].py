@@ -15,3 +15,38 @@
 # --------------------------------------------------------------------------------
 #
 #
+class URL_shortener():
+    def __init__(self):
+        super(URL_shortener, self).__init__()
+        self.hash_table = {}
+        self.map = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+    def shorten(self, url):
+        def get_id(string):
+            num = ""
+            for letter in url:
+                s = str(ord(letter))
+                s = s.rjust(3, "9")
+                num += s
+            id = int(num)
+            return id
+
+        id = get_id(url)
+        short_url = ""
+        while(id > 0):
+            short_url += self.map[id % 62]
+            id //= 62
+        short_url = short_url.rjust(6, self.map[ord(url[-1]) % 62])
+        self.hash_table[short_url] = url
+        return short_url
+
+    def restore(self, short):
+        return self.hash_table.get(short)
+
+
+short = URL_shortener()
+short_url = short.shorten("abc")
+restored_url = short.restore(short_url)
+restored_url1 = short.restore("abcdfg")
+print(restored_url)
+print(restored_url1)

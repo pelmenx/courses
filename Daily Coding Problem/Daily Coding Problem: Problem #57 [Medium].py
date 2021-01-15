@@ -18,3 +18,26 @@
 # --------------------------------------------------------------------------------
 #
 #
+def break_string(string, k):
+    words_list = string.split(" ")
+    result_list = []
+    tmp = ''
+    for word in words_list:
+        if len(word) <= k:
+            if not tmp:
+                tmp = word
+            else:
+                if len(tmp + " " + word) <= k:
+                    tmp = tmp + " " + word
+                else:
+                    result_list.append(tmp)
+                    tmp = word
+        else:
+            return None
+    result_list.append(tmp)
+    return result_list
+
+
+string = "the quick brown fox jumps over the lazy dog"
+
+print(break_string(string, 10))

@@ -16,3 +16,21 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_two_equal_subset(set):
+    def find_two_equal_subset(subset1, subset2=[]):
+        if sum(subset1) == sum(subset2):
+            yield subset1, subset2
+        for i, item in enumerate(subset1):
+            yield from find_two_equal_subset(subset1[:i] + subset1[i + 1:], subset2 + [item])
+
+    splited = []
+    for a, b in find_two_equal_subset(set):
+        splited.append((a, b))
+    if splited:
+        return True
+    else:
+        return False
+
+
+print(find_two_equal_subset([15, 5, 20, 10, 35, 15, 10]))
+print(find_two_equal_subset([15, 5, 20, 10, 35]))

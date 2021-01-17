@@ -29,7 +29,7 @@ def if_word_in_matrix(matrix, word):
                 if item == word[0]:
                     column = []
                     for k, line in enumerate(matrix[i:]):
-                        column.append(line[0])
+                        column.append(line[j])
                     if list(word) == row[j:] or list(word) == column:
                         return True
             else:
@@ -41,5 +41,5 @@ matrix = [['F', 'A', 'C', 'I'],
           ['O', 'B', 'Q', 'P'],
           ['A', 'N', 'O', 'B'],
           ['M', 'A', 'S', 'S']]
-word = "MASS"
+word = "FOAM"
 print(if_word_in_matrix(matrix, word))

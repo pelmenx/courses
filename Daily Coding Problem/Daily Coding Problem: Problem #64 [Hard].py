@@ -12,3 +12,12 @@
 # --------------------------------------------------------------------------------
 #
 #
+def knight_tour(n):
+    def knight_tour():
+        pass
+    board = [[0] * 3] * 3
+    for i, row in enumerate(board):
+        print(i, row)
+
+
+knight_tour(3)

@@ -22,3 +22,24 @@
 # --------------------------------------------------------------------------------
 #
 #
+def if_word_in_matrix(matrix, word):
+    for i, row in enumerate(matrix):
+        for j, item in enumerate(row):
+            if len(matrix) - i >= len(word) or len(row) - j >= len(word):
+                if item == word[0]:
+                    column = []
+                    for k, line in enumerate(matrix[i:]):
+                        column.append(line[0])
+                    if list(word) == row[j:] or list(word) == column:
+                        return True
+            else:
+                break
+    return False
+
+
+matrix = [['F', 'A', 'C', 'I'],
+          ['O', 'B', 'Q', 'P'],
+          ['A', 'N', 'O', 'B'],
+          ['M', 'A', 'S', 'S']]
+word = "MASS"
+print(if_word_in_matrix(matrix, word))

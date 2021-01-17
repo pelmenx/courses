@@ -13,3 +13,17 @@
 # --------------------------------------------------------------------------------
 #
 #
+def power(x, y):
+    if y == 0:
+        return 1
+    if y == 1:
+        return x
+    if y == -1:
+        return 1 / x
+    if y % 2 == 0:
+        return power(x, y / 2) * power(x, y / 2)
+    else:
+        return x * power(x, (y - 1) / 2) * power(x, (y - 1) / 2)
+
+
+print(power(2, 10))

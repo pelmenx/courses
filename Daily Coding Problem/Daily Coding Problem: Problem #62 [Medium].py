@@ -18,3 +18,18 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_all_ways(n, m):
+    def find_all_ways(x, y):
+        if (x, y) == (n - 1, m - 1):
+            yield 1
+        if x + 1 < n:
+            yield from find_all_ways(x + 1, y)
+        if y + 1 < m:
+            yield from find_all_ways(x, y + 1)
+    number_of_ways = 0
+    for i in find_all_ways(0, 0):
+        number_of_ways += 1
+    return number_of_ways
+
+
+print(find_all_ways(5, 5))

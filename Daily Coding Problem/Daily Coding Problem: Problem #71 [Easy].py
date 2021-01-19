@@ -10,3 +10,20 @@
 # --------------------------------------------------------------------------------
 #
 #
+from random import randint
+
+
+def rand7():
+    return randint(1, 7)
+
+
+def rand5():
+    result = rand7() * 7 + rand7() - 7
+    if result < 45:
+        result = result % 7 + 1
+    else:
+        return rand5()
+    return result
+
+
+rand5()

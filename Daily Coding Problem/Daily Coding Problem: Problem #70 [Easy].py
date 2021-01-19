@@ -12,3 +12,23 @@
 # --------------------------------------------------------------------------------
 #
 #
+def perfect_number(n):
+    amount = 0
+    for number in str(n):
+        amount += int(number)
+    if amount == 10:
+        return n
+    elif amount > 10:
+        return None
+    else:
+        last_digit = 10 - amount
+        return int(str(n) + str(last_digit))
+
+
+assert perfect_number(1) == 19
+assert perfect_number(2) == 28
+assert perfect_number(12) == 127
+assert perfect_number(10) == 109
+assert perfect_number(23) == 235
+assert perfect_number(19) == 19
+assert perfect_number(29) is None

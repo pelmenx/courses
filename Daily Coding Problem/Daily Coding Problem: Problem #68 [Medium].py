@@ -34,3 +34,80 @@
 # --------------------------------------------------------------------------------
 #
 #
+def bishop_under_attack(m, bishops_position):
+    matrix = []
+    count = 0
+    for i in range(m):
+        matrix.append([])
+        for j in range(m):
+            matrix[i].append('0')
+    for item in bishops_position:
+        matrix[item[0]][item[1]] = "b"
+    for item in bishops_position:
+        i = item[0]
+        j = item[1]
+        # left up
+        while True:
+            i -= 1
+            j -= 1
+            if 0 <= i < m and 0 <= j < m:
+                if matrix[i][j] != '0':
+                    if matrix[i][j] == 'b':
+                        count += 1
+                        break
+                    else:
+                        break
+            else:
+                break
+        i = item[0]
+        j = item[1]
+        # right up
+        while True:
+            i -= 1
+            j += 1
+            if 0 <= i < m and 0 <= j < m:
+                if matrix[i][j] != '0':
+                    if matrix[i][j] == 'b':
+                        count += 1
+                        break
+                    else:
+                        break
+            else:
+                break
+        # left down
+        i = item[0]
+        j = item[1]
+        while True:
+            i += 1
+            j -= 1
+            if 0 <= i < m and 0 <= j < m:
+                if matrix[i][j] != '0':
+                    if matrix[i][j] == 'b':
+                        count += 1
+                        break
+                    else:
+                        break
+            else:
+                break
+        i = item[0]
+        j = item[1]
+        # right down
+        while True:
+            i += 1
+            j += 1
+            if 0 <= i < m and 0 <= j < m:
+                if matrix[i][j] != '0':
+                    if matrix[i][j] == 'b':
+                        count += 1
+                        break
+                    else:
+                        break
+            else:
+                break
+        matrix[item[0]][item[1]] = "1"
+    return count
+
+
+bishops_position = ((0, 0), (1, 2), (2, 2), (4, 0), (4, 4))
+
+print(bishop_under_attack(5, bishops_position))

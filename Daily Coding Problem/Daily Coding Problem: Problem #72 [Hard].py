@@ -43,3 +43,49 @@
 # --------------------------------------------------------------------------------
 #
 #
+from itertools import product
+
+
+def find_largest_value_path(nodes, list_of_edges):
+    max_edges = 0
+    for product_ in product((0, 1), repeat=len(list_of_edges)):
+        path = []
+        if sum(product_) >= 1:
+            for rank, edge in zip(product_, list_of_edges):
+                if edge[0] == edge[1]:
+                    return None
+                if rank == 1:
+                    path.append(edge)
+            if len(path) == 1:
+                count = 1
+                if count > max_edges:
+                    max_edges = count
+            else:
+                counter_dict = {}
+                check = True
+                for current_path, next_path in zip(path[:-1], path[1:]):
+                    if current_path[1] != next_path[0]:
+                        check = False
+                        break
+                    if nodes[next_path[0]] in counter_dict:
+                        counter_dict[nodes[next_path[0]]] += 1
+                    else:
+                        counter_dict[nodes[next_path[0]]] = 1
+
+                if check is True:
+                    if nodes[path[0][0]] in counter_dict:
+                        counter_dict[nodes[path[0][0]]] += 1
+                    else:
+                        counter_dict[nodes[path[0][0]]] = 1
+                    if nodes[path[-1][1]] in counter_dict:
+                        counter_dict[nodes[path[-1][1]]] += 1
+                    else:
+                        counter_dict[nodes[path[-1][1]]] = 1
+                    for item in counter_dict:
+                        if counter_dict.get(item) > max_edges:
+                            max_edges = counter_dict.get(item)
+    return max_edges
+
+
+assert find_largest_value_path("ABACA", [(0, 1), (0, 2), (2, 3), (3, 4)]) == 3
+assert find_largest_value_path("A", [(0, 0)]) is None

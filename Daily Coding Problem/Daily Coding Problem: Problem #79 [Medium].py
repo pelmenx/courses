@@ -15,3 +15,25 @@
 # --------------------------------------------------------------------------------
 #
 #
+def decreasing_array(array):
+    count = 0
+    i = 0
+    j = 1
+    while i < len(array) and j < len(array):
+        if array[i] >= array[j]:
+            i += 1
+            j += 1
+        else:
+            count += 1
+            if count > 1:
+                return False
+            j += 1
+    if count == 1:
+        return True
+    else:
+        return False
+
+
+assert decreasing_array([10, 5, 7]) is True
+assert decreasing_array([10, 5, 1]) is False
+assert decreasing_array([10, 50, 30]) is False

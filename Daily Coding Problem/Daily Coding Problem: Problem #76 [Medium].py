@@ -47,3 +47,20 @@
 # --------------------------------------------------------------------------------
 #
 #
+def number_of_removed_columns(matrix):
+    if len(matrix) <= 1:
+        return 0
+    count = 0
+    N = len(matrix)
+    M = len(matrix[0])
+    for i in range(M):
+        for j in range(1, N):
+            if matrix[j][i] < matrix[j - 1][i]:
+                count += 1
+                break
+    return count
+
+
+assert number_of_removed_columns([['c', 'b', 'a'], ['d', 'a', 'f'], ['g', 'h', 'i']]) == 1
+assert number_of_removed_columns(['a', 'b', 'c', 'd', 'e', 'f']) == 0
+assert number_of_removed_columns([['z', 'y', 'x'], ['w', 'v', 'u'], ['t', 's', 'r']]) == 3

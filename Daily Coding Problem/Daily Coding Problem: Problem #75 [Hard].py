@@ -12,3 +12,29 @@
 # --------------------------------------------------------------------------------
 #
 #
+from itertools import product
+
+
+def longest_increasing_subsequence(array):
+    largest_subsequence = 0
+    for product_ in product((0, 1), repeat=len(array)):
+        tmp_array = []
+        check = True
+        for p, item in zip(product_, array):
+            if p == 1:
+                if len(tmp_array) > 0:
+                    if item > tmp_array[-1]:
+                        tmp_array.append(item)
+                    else:
+                        check = False
+                        break
+                else:
+                    tmp_array.append(item)
+        if check:
+            if len(tmp_array) > largest_subsequence:
+                largest_subsequence = len(tmp_array)
+
+    return largest_subsequence
+
+
+assert longest_increasing_subsequence([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]) == 6

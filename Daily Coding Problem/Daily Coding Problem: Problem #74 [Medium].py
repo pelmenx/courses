@@ -30,3 +30,13 @@
 # --------------------------------------------------------------------------------
 #
 #
+def multiplication_table(N, number):
+    count = 0
+    for i in range(N):
+        for j in range(N):
+            if ((i + 1) * (j + 1)) == number:
+                count += 1
+    return count
+
+
+assert multiplication_table(6, 12) == 4

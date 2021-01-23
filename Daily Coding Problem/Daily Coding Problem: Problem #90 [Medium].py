@@ -9,3 +9,14 @@
 # --------------------------------------------------------------------------------
 #
 #
+from random import randint
+
+
+def random_number(n, array):
+    number = randint(0, n - 1)
+    if number in array:
+        return random_number(n, array)
+    return number
+
+
+print(random_number(5, [3]))

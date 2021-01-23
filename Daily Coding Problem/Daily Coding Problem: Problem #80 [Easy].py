@@ -41,7 +41,7 @@ def deepest_node(root_):
         depth_right = depth
         if root.right:
             root_right, depth_right = deepest_node_inside(root.right, depth + 1)
-        depth_left = 0
+        depth_left = depth
         if root.left:
             root_left, depth_left = deepest_node_inside(root.left, depth + 1)
         if depth_left > depth_right:

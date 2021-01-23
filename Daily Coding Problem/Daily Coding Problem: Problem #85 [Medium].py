@@ -9,3 +9,9 @@
 # --------------------------------------------------------------------------------
 #
 #
+def return_number(x, y, b):
+    return (x * b + y * abs(b - 1))
+
+
+assert return_number(5, 4, 1) == 5
+assert return_number(5, 4, 0) == 4

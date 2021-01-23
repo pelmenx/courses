@@ -1,10 +1,10 @@
 import imaplib
 import email
-from _login import login, password
+from _login import login_user, password
 
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login(login, password)
+mail.login(login_user, password)
 
 mail.list()
 mail.select("Daily_Coding_Problem")

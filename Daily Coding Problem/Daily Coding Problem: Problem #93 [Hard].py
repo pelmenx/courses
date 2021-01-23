@@ -71,7 +71,7 @@ def find_valid_BST(root_list):
                 max_deapth = depth_
                 root_ = instance
         except Exception:
-            pass
+            continue
     return root_, max_deapth
 
 

@@ -17,3 +17,32 @@
 # --------------------------------------------------------------------------------
 #
 #
+from itertools import permutations
+
+
+def find_next_permutation(array):
+    next_permutation = None
+    lowest_value_permutation = None
+    for p_ in permutations(array, len(array)):
+        p_ = list(p_)
+        if p_ > array:
+            if not next_permutation:
+                next_permutation = p_
+            else:
+                if array < p_ < next_permutation:
+                    next_permutation = p_
+        elif p_ < array:
+            if not lowest_value_permutation:
+                lowest_value_permutation = p_
+            else:
+                if p_ < lowest_value_permutation:
+                    lowest_value_permutation = p_
+    if next_permutation:
+        return next_permutation
+    else:
+        return lowest_value_permutation
+
+
+assert find_next_permutation([1, 2, 3]) == [1, 3, 2]
+assert find_next_permutation([1, 3, 2]) == [2, 1, 3]
+assert find_next_permutation([3, 2, 1]) == [1, 2, 3]

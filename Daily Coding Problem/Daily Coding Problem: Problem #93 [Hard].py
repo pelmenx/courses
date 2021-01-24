@@ -27,62 +27,15 @@ class Node(object, metaclass=Node_list):
         self.right = None
 
 
-def find_valid_BST(root_list):
-    def subtree(root):
-        if root:
-            yield root.arg
-            if root.right:
-                yield from subtree(root.right)
-            if root.left:
-                yield from subtree(root.left)
-
-    def deepest_node_inside(root, depth=0):
-        if not root.right and not root.left:
-            return root, depth
-        depth_right = depth
-        if root.right:
-            if root.right.arg >= root.arg:
-                root_right, depth_right = deepest_node_inside(root.right, depth + 1)
-            else:
-                raise Exception
-        depth_left = depth
-        if root.left:
-            if root.left.arg <= root.arg:
-                root_left, depth_left = deepest_node_inside(root.left, depth + 1)
-            else:
-                raise Exception
-        if depth_left > depth_right:
-            return(root_left, depth_left)
-        else:
-            return(root_right, depth_right)
-
-    max_deapth = 0
-    root_ = None
-    for instance in root_list:
-        for node in subtree(instance.left):
-            if node > instance.arg:
-                continue
-        for node in subtree(instance.right):
-            if node < instance.arg:
-                continue
-        try:
-            _, depth_ = deepest_node_inside(instance)
-            if depth_ >= max_deapth:
-                max_deapth = depth_
-                root_ = instance
-        except Exception:
-            continue
-    return root_, max_deapth
-
-
 a = Node(50)
 b = Node(25)
 c = Node(75)
 d = Node(12)
-e = Node(37)
+e = Node(500)
 f = Node(62)
 g = Node(87)
-h = Node(80)
+h = Node(100)
+
 
 a.left = b
 a.right = c
@@ -92,4 +45,52 @@ c.left = f
 c.right = g
 g.right = h
 
-assert find_valid_BST(Node.instances) == (b, 1)
+
+def find_valid_BST(root_list):
+    def subtree(root, flag):
+        if root:
+            if flag == "left" and root.arg > instance.arg:
+                raise Exception
+            if flag == "right" and root.arg < instance.arg:
+                raise Exception
+            yield root.arg
+            if root.right:
+                yield from subtree(root.right, flag)
+            if root.left:
+                yield from subtree(root.left, flag)
+
+    def deepest_node_inside(root, depth=0):
+        if not root.right and not root.left:
+            return
+        if root.right:
+            if root.right.arg >= root.arg:
+                deepest_node_inside(root.right)
+            else:
+                raise Exception
+        if root.left:
+            if root.left.arg <= root.arg:
+                deepest_node_inside(root.left)
+            else:
+                raise Exception
+
+    max_size = 0
+    root_ = None
+    for instance in root_list:
+        try:
+            left_subtree = []
+            right_subtree = []
+            for node in subtree(instance.left, "left"):
+                left_subtree.append(node)
+            for node in subtree(instance.right, "right"):
+                right_subtree.append(node)
+            deepest_node_inside(instance)
+        except Exception:
+            continue
+        else:
+            if (len(left_subtree) + len(right_subtree) + 1) >= max_size:
+                max_size = len(left_subtree) + len(right_subtree) + 1
+                root_ = instance
+    return root_, max_size
+
+
+assert find_valid_BST(Node.instances) == (c, 4)

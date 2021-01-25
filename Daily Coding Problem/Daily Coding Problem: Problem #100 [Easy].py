@@ -32,3 +32,13 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_number_of_steps(array):
+    number_of_steps = 0
+    for pair_1, pair_2 in zip(array[:-1], array[1:]):
+        number_of_steps += max(abs(pair_1[0] - pair_2[0]), abs(pair_1[1] - pair_2[1]))
+    print(number_of_steps)
+
+
+# find_number_of_steps([(0, 0), (1, 1), (1, 2)])
+
+find_number_of_steps([(0, 0), (2, 2), (2, 1), (1, 1), (1, 2), (2, 2), (4, 5), (2, 2)])

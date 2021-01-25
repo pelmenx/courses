@@ -29,3 +29,22 @@
 # --------------------------------------------------------------------------------
 #
 #
+def find_two_prime_numbers(number):
+    def is_prime(num):
+        for i_ in range(2, num // 2):
+            if num % i_ == 0:
+                return False
+        return True
+    if number < 3 or number % 2 == 1:
+        return None
+    for i in range(2, number):
+        if_i_is_prime_number = is_prime(i)
+        if if_i_is_prime_number:
+            j = number - i
+            if_j_is_prime_number = is_prime(j)
+            if if_j_is_prime_number:
+                return(i, j)
+
+
+assert find_two_prime_numbers(4) == (2, 2)
+assert find_two_prime_numbers(100) == (3, 97)

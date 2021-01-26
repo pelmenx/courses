@@ -37,7 +37,7 @@ def find_two_prime_numbers(number):
         return True
     if number < 3 or number % 2 == 1:
         return None
-    for i in range(2, number):
+    for i in range(2, number - 1):
         if_i_is_prime_number = is_prime(i)
         if if_i_is_prime_number:
             j = number - i

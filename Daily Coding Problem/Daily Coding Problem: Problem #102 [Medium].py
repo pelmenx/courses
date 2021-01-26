@@ -12,3 +12,13 @@
 # --------------------------------------------------------------------------------
 #
 #
+def secuence_contiguous_element(array, k):
+    if not array:
+        return None
+    for i in range(1, len(array) + 1):
+        if sum(array[:i]) == k:
+            return array[:i]
+    return secuence_contiguous_element(array[1:], k)
+
+
+assert secuence_contiguous_element([1, 2, 3, 4, 5], 9) == [2, 3, 4]

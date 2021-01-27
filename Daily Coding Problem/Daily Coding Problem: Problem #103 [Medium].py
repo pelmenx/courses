@@ -17,15 +17,15 @@
 import copy
 
 
-def shortest_substring(string, array):
+def shortest_substring(string, set):
     def shortest_substring_inside(string_inside):
-        if len(string_inside) < len(array):
+        if len(string_inside) < len(set):
             return
         if not string_inside:
             return
-        for i in range(len(array), len(string_inside) + 1):
+        for i in range(len(set), len(string_inside) + 1):
             check = True
-            for item in array:
+            for item in set:
                 if item not in string_inside[:i]:
                     check = False
                     break
@@ -44,4 +44,4 @@ def shortest_substring(string, array):
         return None
 
 
-shortest_substring("figehaeci", ("a", "e", "i"))
+shortest_substring("figehaeci", {"a", "e", "i"})

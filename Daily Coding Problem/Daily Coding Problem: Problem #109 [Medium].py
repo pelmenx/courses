@@ -13,3 +13,12 @@
 # --------------------------------------------------------------------------------
 #
 #
+def swap(integer):
+    b = list(bin(integer))
+    for i in range(3, len(b), 2):
+        b[i], b[i - 1] = b[i - 1], b[i]
+    b = int("".join(b), 2)
+    return b
+
+
+print(swap(5))

@@ -12,3 +12,14 @@
 # --------------------------------------------------------------------------------
 #
 #
+def is_shifted(string_1, string_2):
+    if len(string_1) != len(string_2):
+        return False
+    for i in range(len(string_1)):
+        if string_1[i:] + string_1[:i] == string_2:
+            return True
+    return False
+
+
+assert is_shifted('abcde', 'cdeab') is True
+assert is_shifted('abc', 'acb') is False

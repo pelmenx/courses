@@ -11,3 +11,19 @@
 # --------------------------------------------------------------------------------
 #
 #
+from itertools import permutations
+
+
+def find_anagrams(word, string):
+    anagrams = {}
+    anagrams_position = []
+    for p_ in permutations(word, len(word)):
+        p_ = "".join(p_)
+        anagrams[p_] = None
+    for i in range(len(string[:-len(word) + 1])):
+        if string[i:i + len(word)] in anagrams:
+            anagrams_position.append(i)
+    return anagrams_position
+
+
+assert find_anagrams("ab", "abxaba") == [0, 3, 4]

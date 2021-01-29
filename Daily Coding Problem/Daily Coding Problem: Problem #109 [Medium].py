@@ -21,4 +21,4 @@ def swap(integer):
     return b
 
 
-print(swap(5))
+assert swap(5) == 3

@@ -12,3 +12,25 @@
 # --------------------------------------------------------------------------------
 #
 #
+def reverse_word(string):
+    string = list(string)
+    print(string)
+    left = 0
+    right = len(string) - 1
+    while left < right:
+        if string[left] == " " and string[right] == " ":
+            string = string[right + 1:] + string[left:right + 1] + string[:left]
+            left += 1
+            right -= 1
+        elif string[left] != " " and string[right] != " ":
+            left += 1
+            right -= 1
+        elif string[left] == " " and string[right] != " ":
+            right -= 1
+        elif string[right] == " " and string[left] != " ":
+            left += 1
+    string = "".join(string)
+    return string
+
+
+print(reverse_word("hello world here"))

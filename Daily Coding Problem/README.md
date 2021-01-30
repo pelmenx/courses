@@ -1177,7 +1177,7 @@ Given an array of numbers, find the length of the longest increasing subsequence
 
 For example, given the array `[0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]`, the longest increasing subsequence has length 6: it is `0, 2, 6, 9, 11, 15`.
 
-[Solution](Solutions/problem_075.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2375%20%5BHard%5D.py)
 
 ---
 
@@ -1223,7 +1223,7 @@ tsr
 
 Your function should return 3, since we would need to remove all the columns to order it.
 
-[Solution](Solutions/problem_076.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2376%20%5BMedium%5D.py)
 
 ---
 
@@ -1237,7 +1237,7 @@ The input list is not necessarily ordered in any way.
 
 For example, given `[(1, 3), (5, 8), (4, 10), (20, 25)]`, you should return `[(1, 3), (4, 10), (20, 25)]`.
 
-[Solution](Solutions/problem_077.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2377%20%5BEasy%5D.py)
 
 ---
 
@@ -1247,7 +1247,7 @@ This problem was asked recently by Google.
 
 Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.
 
-[Solution](Solutions/problem_078.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2378%20%5BMedium%5D.py)
 
 ---
 
@@ -1261,7 +1261,7 @@ For example, given the array `[10, 5, 7]`, you should return true, since we can 
 
 Given the array `[10, 5, 1]`, you should return false, since we can't modify any one element to get a non-decreasing array.
 
-[Solution](Solutions/problem_079.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2379%20%5BMedium%5D.py)
 
 ---
 
@@ -1279,7 +1279,7 @@ Given the root of a binary tree, return a deepest node. For example, in the foll
 d
 ```
 
-[Solution](Solutions/problem_080.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2380%20%5BEasy%5D.py)
 
 ---
 
@@ -1291,7 +1291,7 @@ Given a mapping of digits to letters (as in a phone number), and a digit string,
 
 For example if `{'2': ['a', 'b', 'c'], '3': ['d', 'e', 'f'], }` then `"23"` should return `['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']`.
 
-[Solution](Solutions/problem_081.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2381%20%5BEasy%5D.py)
 
 ---
 
@@ -1303,7 +1303,7 @@ Using a read7() method that returns 7 characters from a file, implement readN(n)
 
 For example, given a file with the content "Hello world", three read7() returns "Hello w", "orld" and then "".
 
-[Solution](Solutions/problem_082.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2382%20%5BEasy%5D.py)
 
 ---
 
@@ -1331,7 +1331,7 @@ should become:
   f e  d
 ```
 
-[Solution](Solutions/problem_083.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2383%20%5BMedium%5D.py)
 
 ---
 
@@ -1352,7 +1352,7 @@ For example, this matrix has 4 islands.
 1 1 0 0 1
 ```
 
-[Solution](Solutions/problem_084.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2384%20%5BMedium%5D.py)
 
 ---
 
@@ -1362,7 +1362,7 @@ This problem was asked by Facebook.
 
 Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.
 
-[Solution](Solutions/problem_085.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2385%20%5BMedium%5D.py)
 
 ---
 
@@ -1374,7 +1374,7 @@ Given a string of parentheses, write a function to compute the minimum number of
 
 For example, given the string "()())()", you should return 1. Given the string ")(", you should return 2, since we must remove all of them.
 
-[Solution](Solutions/problem_086.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2386%20%5BMedium%5D.py)
 
 ---
 
@@ -1407,7 +1407,7 @@ A N B
 
 is considered valid.
 
-[Solution](Solutions/problem_087.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2387%20%5BHard%5D.py)
 
 ---
 
@@ -1417,7 +1417,7 @@ This question was asked by ContextLogic.
 
 Implement division of two positive integers without using the division, multiplication, or modulus operators. Return the quotient as an integer, ignoring the remainder.
 
-[Solution](Solutions/problem_088.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2388%20%5BMedium%5D.py)
 
 ---
 
@@ -1429,7 +1429,7 @@ Determine whether a tree is a valid binary search tree.
 
 A binary search tree is a tree with two children, left and right, and satisfies the constraint that the key in the left child must be less than or equal to the root and the key in the right child must be greater than or equal to the root.
 
-[Solution](Solutions/problem_089.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2389%20%5BMedium%5D.py)
 
 ---
 
@@ -1439,7 +1439,7 @@ This question was asked by Google.
 
 Given an integer n and a list of integers l, write a function that randomly generates a number from 0 to n-1 that isn't in l (uniform).
 
-[Solution](Solutions/problem_090.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2390%20%5BMedium%5D.py)
 
 ---
 
@@ -1458,7 +1458,7 @@ for f in functions:
     print(f())
 ```
 
-[Solution](Solutions/problem_091.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2391%20%5BEasy%5D.py)
 
 ---
 
@@ -1472,7 +1472,7 @@ Return null if there is no such ordering.
 
 For example, given `{'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': []}`, should return `['CSC100', 'CSC200', 'CSCS300']`.
 
-[Solution](Solutions/problem_092.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2392%20%5BHard%5D.py)
 
 ---
 
@@ -1484,7 +1484,7 @@ Given a tree, find the largest tree/subtree that is a BST.
 
 Given a tree, return the size of the largest tree/subtree that is a BST.
 
-[Solution](Solutions/problem_093.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2393%20%5BHard%5D.py)
 
 ---
 
@@ -1494,7 +1494,7 @@ This problem was asked by Google.
 
 Given a binary tree of integers, find the maximum path sum between two nodes. The path must go through at least one node, and does not need to go through the root.
 
-[Solution](Solutions/problem_094.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2394%20%5BEasy%5D.py)
 
 ---
 
@@ -1508,7 +1508,7 @@ For example, the list `[1,2,3]` should return `[1,3,2]`. The list `[1,3,2]` shou
 
 Can you perform the operation without allocating extra memory (disregarding the input memory)?
 
-[Solution](Solutions/problem_095.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2395%20%5BHard%5D.py)
 
 ---
 
@@ -1520,7 +1520,7 @@ Given a number in the form of a list of digits, return all possible permutations
 
 For example, given `[1,2,3]`, return `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`.
 
-[Solution](Solutions/problem_096.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2396%20%5BEasy%5D.py)
 
 ---
 
@@ -1555,7 +1555,7 @@ d.set(1, 2, 0) # set key 1 to value 2 at time 0
 d.get(1, 0) # get key 1 at time 0 should be 2
 ```
 
-[Solution](Solutions/problem_097.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2397%20%5BMedium%5D.py)
 
 ---
 
@@ -1577,7 +1577,7 @@ For example, given the following board:
 ```
 `exists(board, "ABCCED")` returns true, `exists(board, "SEE")` returns true, `exists(board, "ABCB")` returns false.
 
-[Solution](Solutions/problem_098.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2398%20%5BEasy%5D.py)
 
 ---
 
@@ -1591,7 +1591,7 @@ For example, given [100, 4, 200, 1, 3, 2], the longest consecutive element seque
 
 Your algorithm should run in O(n) complexity.
 
-[Solution](Solutions/problem_099.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2399%20%5BMedium%5D.py)
 
 ---
 
@@ -1620,7 +1620,7 @@ Input: `[(0, 0), (1, 1), (1, 2)]`
 Output: 2
 It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
 
-[Solution](Solutions/problem_100.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23100%20%5BEasy%5D.py)
 
 ---
 
@@ -1645,7 +1645,7 @@ If `[a, b]` is one solution with `a <= b`, and `[c, d]` is another solution with
 if a < c or a==c and b < d.
 ```
 
-[Solution](Solutions/problem_101.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23101%20%5BEasy%5D.py)
 
 ---
 
@@ -1657,7 +1657,7 @@ Given a list of integers and a number K, return which contiguous elements of the
 
 For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2, 3, 4].
 
-[Solution](Solutions/problem_102.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23102%20%5BMedium%5D.py)
 
 ---
 
@@ -1671,7 +1671,7 @@ For example, given the string "figehaeci" and the set of characters {a, e, i}, y
 
 If there is no substring containing all the characters in the set, return null.
 
-[Solution](Solutions/problem_103.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23103%20%5BMedium%5D.py)
 
 ---
 
@@ -1683,7 +1683,7 @@ Determine whether a doubly linked list is a palindrome. What if it’s singly li
 
 For example, `1 -> 4 -> 3 -> 4 -> 1` returns true while `1 -> 4` returns false.
 
-[Solution](Solutions/problem_104.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23104%20%5BEasy%5D.py)
 
 ---
 
@@ -1695,7 +1695,7 @@ Given a function f, and N return a debounced f of N milliseconds.
 
 That is, as long as the debounced f continues to be invoked, f itself will not be called for N milliseconds.
 
-[Solution](Solutions/problem_105.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23105%20%5BEasy%5D.py)
 
 ---
 
@@ -1707,7 +1707,7 @@ Given an integer list where each number represents the number of hops you can ma
 
 For example, `[2, 0, 1, 0]` returns `true` while `[1, 1, 0, 1]` returns `false`.
 
-[Solution](Solutions/problem_106.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23106%20%5BMedium%5D.py)
 
 ---
 
@@ -1725,7 +1725,7 @@ Print the nodes in a binary tree level-wise. For example, the following should p
   4   5
 ```
 
-[Solution](Solutions/problem_107.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23107%20%5BEasy%5D.py)
 
 ---
 
@@ -1737,7 +1737,7 @@ Given two strings A and B, return whether or not A can be shifted some number of
 
 For example, if A is `abcde` and B is `cdeab`, return true. If A is `abc` and B is `acb`, return false.
 
-[Solution](Solutions/problem_108.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23108%20%5BEasy%5D.py)
 
 ---
 
@@ -1751,7 +1751,7 @@ For example, `10101010` should be `01010101`. `11100010` should be `11010001`.
 
 Bonus: Can you do this in one line?
 
-[Solution](Solutions/problem_109.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23109%20%5BMedium%5D.py)
 
 ---
 
@@ -1773,7 +1773,7 @@ For example, given the tree
 
 it should return `[[1, 2], [1, 3, 4], [1, 3, 5]]`.
 
-[Solution](Solutions/problem_110.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23110%20%5BMedium%5D.py)
 
 ---
 
@@ -1785,7 +1785,7 @@ Given a word W and a string S, find all starting indices in S which are anagrams
 
 For example, given that W is "ab", and S is "abxaba", return 0, 3, and 4.
 
-[Solution](Solutions/problem_111.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23111%20%5BHard%5D.py)
 
 ---
 
@@ -1797,7 +1797,7 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in
 
 According to the definition of LCA on Wikipedia: "The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself)."
 
-[Solution](Solutions/problem_112.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23112%20%5BHard%5D.py)
 
 ---
 

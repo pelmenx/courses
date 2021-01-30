@@ -25,7 +25,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division?
 
-[Solution](Solutions/problem_002.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%232%20%5BHard%5D.py)
 
 ---
 
@@ -35,7 +35,7 @@ This problem was asked by Google.
 
 Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
-[Solution](Solutions/problem_003.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%233%20%5BMedium%5D.py)
 
 ---
 
@@ -49,7 +49,7 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 
 You can modify the input array in-place.
 
-[Solution](Solutions/problem_004.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%234%20%5BHard%5D.py)
 
 ---
 
@@ -66,7 +66,7 @@ def cons(a, b):
 ```
 Implement car and cdr.
 
-[Solution](Solutions/problem_005.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%235%20%5BMedium%5D.py)
 
 ---
 
@@ -78,7 +78,7 @@ An XOR linked list is a more memory efficient doubly linked list. Instead of eac
 
 If using a language that has no pointers (such as Python), you can assume you have access to get_pointer and dereference_pointer functions that converts between nodes and memory addresses.
 
-[Solution](Solutions/problem_006.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%236%20%5BHard%5D.py)
 
 ---
 
@@ -92,7 +92,7 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 
 You can assume that the messages are decodable. For example, '001' is not allowed.
 
-[Solution](Solutions/problem_007.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%237%20%5BMedium%5D.py)
 
 ---
 
@@ -116,7 +116,7 @@ For example, the following tree has 5 unival subtrees:
  1   1
 ```
 
-[Solution](Solutions/problem_008.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%238%20%5BEasy%5D.py)
 
 ---
 
@@ -128,7 +128,7 @@ Given a list of integers, write a function that returns the largest sum of non-a
 
 For example, [2, 4, 6, 8] should return 12, since we pick 4 and 8. [5, 1, 1, 5] should return 10, since we pick 5 and 5.
 
-[Solution](Solutions/problem_009.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%239%20%5BHard%5D.py)
 
 ---
 
@@ -138,7 +138,7 @@ This problem was asked by Apple.
 
 Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
 
-[Solution](Solutions/problem_010.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2310%20%5BMedium%5D.py)
 
 ---
 
@@ -152,7 +152,7 @@ For example, given the query string de and the set of strings [dog, deer, deal],
 
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
-[Solution](Solutions/problem_011.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2311%20%5BMedium%5D.py)
 
 ---
 
@@ -174,7 +174,7 @@ For example, if N is 4, then there are 5 unique ways:
 
 What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 
-[Solution](Solutions/problem_012.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2312%20%5BHard%5D.py)
 
 ---
 
@@ -186,7 +186,7 @@ Given an integer k and a string s, find the length of the longest substring that
 
 For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
 
-[Solution](Solutions/problem_013.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2313%20%5BHard%5D.py)
 
 ---
 
@@ -198,7 +198,7 @@ The area of a circle is defined as r^2. Estimate \pi to 3 decimal places using a
 
 Hint: The basic equation of a circle is x^2 + y^2 = r^2.
 
-[Solution](Solutions/problem_014.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2314%20%5BMedium%5D.py)
 
 ---
 
@@ -208,7 +208,7 @@ This problem was asked by Facebook.
 
 Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
 
-[Solution](Solutions/problem_015.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2315%20%5BMedium%5D.py)
 
 ---
 

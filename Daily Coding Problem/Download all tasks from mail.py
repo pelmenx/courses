@@ -27,12 +27,10 @@ for id in id_list:
             if i == 0:
                 body = payload.get_payload(decode=True).decode('utf-8')
                 body = body[:body.index("Upgrade to premium")]
-                # print(body)
             i += 1
     else:
         body = payload.get_payload(decode=True).decode('utf-8')
         body = body[:body.index("Upgrade to premium")]
-        # print(body)
     body = body.split("\n")
     try:
         with open("./Daily Coding Problem/Solutions" + file_name + '.py', 'x') as file:

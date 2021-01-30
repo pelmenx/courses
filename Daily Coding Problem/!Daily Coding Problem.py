@@ -35,7 +35,7 @@ for id in id_list:
         # print(body)
     body = body.split("\n")
     try:
-        with open("./Daily Coding Problem/" + file_name + '.py', 'x') as file:
+        with open("./Daily Coding Problem/Solutions" + file_name + '.py', 'x') as file:
             for line in body:
                 if len(line) > 1:
                     file.write("# " + line + '\n')

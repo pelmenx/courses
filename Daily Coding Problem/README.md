@@ -11,7 +11,7 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-[Solution](Solutions/Daily Coding Problem: Problem #1 [Easy].py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%231%20%5BEasy%5D.py)
 
 ---
 

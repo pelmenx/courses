@@ -222,7 +222,7 @@ record(order_id): adds the order_id to the log
 get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N.
 You should be as efficient with time and space as possible.
 
-[Solution](Solutions/problem_016.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2316%20%5BEasy%5D.py)
 
 ---
 
@@ -261,7 +261,7 @@ We are interested in finding the longest (number of characters) absolute path to
 
 Given a string representing the file system in the above format, return the length of the longest absolute path to a file in the abstracted file system. If there is no file in the system, return 0.
 
-[Solution](Solutions/problem_017.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2317%20%5BHard%5D.py)
 
 ---
 
@@ -282,7 +282,7 @@ For example, given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7,
 
 Do this in O(n) time and O(k) space. You can modify the input array in-place and you do not need to store the results. You can simply print them out as you compute them.
 
-[Solution](Solutions/problem_018.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2318%20%5BHard%5D.py)
 
 ---
 
@@ -294,7 +294,7 @@ A builder is looking to build a row of N houses that can be of K different color
 
 Given an N by K matrix where the nth row and kth column represents the cost to build the nth house with kth color, return the minimum cost which achieves this goal.
 
-[Solution](Solutions/problem_019.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2319%20%5BMedium%5D.py)
 
 ---
 
@@ -310,7 +310,7 @@ In this example, assume nodes with the same value are the exact same node object
 
 Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
 
-[Solution](Solutions/problem_020.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2320%20%5BEasy%5D.py)
 
 ---
 
@@ -322,7 +322,7 @@ Given an array of time intervals (start, end) for classroom lectures (possibly o
 
 For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
 
-[Solution](Solutions/problem_021.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2321%20%5BEasy%5D.py)
 
 ---
 
@@ -336,7 +336,7 @@ For example, given the set of words 'quick', 'brown', 'the', 'fox', and the stri
 
 Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string "bedbathandbeyond", return either ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
 
-[Solution](Solutions/problem_022.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2322%20%5BMedium%5D.py)
 
 ---
 
@@ -359,7 +359,7 @@ For example, given the following board:
 
 and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number of steps required to reach the end is 7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.
 
-[Solution](Solutions/problem_023.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2323%20%5BEasy%5D.py)
 
 ---
 
@@ -376,7 +376,7 @@ lock, which attempts to lock the node. If it cannot be locked, then it should re
 unlock, which unlocks the node. If it cannot be unlocked, then it should return false. Otherwise, it should unlock it and return true.
 You may augment the node to add parent pointers or any other property you would like. You may assume the class is used in a single-threaded program, so there is no need for actual locks or mutexes. Each method should run in O(h), where h is the height of the tree.
 
-[Solution](Solutions/problem_024.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2324%20%5BMedium%5D.py)
 
 ---
 
@@ -394,7 +394,7 @@ For example, given the regular expression "ra." and the string "ray", your funct
 
 Given the regular expression `".*at"` and the string "chat", your function should return true. The same regular expression on the string "chats" should return false.
 
-[Solution](Solutions/problem_025.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2325%20%5BHard%5D.py)
 
 ---
 
@@ -408,7 +408,7 @@ The list is very long, so making more than one pass is prohibitively expensive.
 
 Do this in constant space and in one pass.
 
-[Solution](Solutions/problem_026.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2326%20%5BMedium%5D.py)
 
 ---
 
@@ -422,7 +422,7 @@ For example, given the string "([])[]({})", you should return true.
 
 Given the string "([)]" or "((()", you should return false.
 
-[Solution](Solutions/problem_027.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2327%20%5BEasy%5D.py)
 
 ---
 
@@ -444,7 +444,7 @@ For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "
 "fox  jumps  over", # 2 extra spaces distributed evenly
 "the   lazy   dog"] # 4 extra spaces distributed evenly
 
-[Solution](Solutions/problem_028.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2328%20%5BMedium%5D.py)
 
 ---
 
@@ -457,7 +457,7 @@ Run-length encoding is a fast and simple method of encoding strings. The basic i
 
 Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely of alphabetic characters. You can assume the string to be decoded is valid.
 
-[Solution](Solutions/problem_029.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2329%20%5BEasy%5D.py)
 
 ---
 
@@ -471,7 +471,7 @@ For example, given the input [2, 1, 2], we can hold 1 unit of water in the middl
 
 Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in the second, and 3 in the fourth index (we cannot hold 5 since it would run off to the left), so we can trap 8 units of water.
 
-[Solution](Solutions/problem_030.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2330%20%5BMedium%5D.py)
 
 ---
 
@@ -483,7 +483,7 @@ The edit distance between two strings refers to the minimum number of character 
 
 Given two strings, compute the edit distance between them.
 
-[Solution](Solutions/problem_031.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2331%20%5BEasy%5D.py)
 
 ---
 
@@ -495,7 +495,7 @@ Suppose you are given a table of currency exchange rates, represented as a 2D ar
 
 There are no transaction costs and you can trade fractional quantities.
 
-[Solution](Solutions/problem_032.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2332%20%5BHard%5D.py)
 
 ---
 
@@ -519,7 +519,7 @@ For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should pri
 2
 ```
 
-[Solution](Solutions/problem_033.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2333%20%5BEasy%5D.py)
 
 ---
 
@@ -533,7 +533,7 @@ For example, given the string "race", you should return "ecarace", since we can 
 
 As another example, given the string "google", you should return "elgoogle".
 
-[Solution](Solutions/problem_034.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2334%20%5BMedium%5D.py)
 
 ---
 
@@ -547,7 +547,7 @@ Do this in linear time and in-place.
 
 For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
 
-[Solution](Solutions/problem_035.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2335%20%5BHard%5D.py)
 
 ---
 
@@ -557,7 +557,7 @@ This problem was asked by Dropbox.
 
 Given the root to a binary search tree, find the second largest node in the tree.
 
-[Solution](Solutions/problem_036.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2336%20%5BMedium%5D.py)
 
 ---
 
@@ -571,7 +571,7 @@ For example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2
 
 You may also use a list or array to represent a set.
 
-[Solution](Solutions/problem_037.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2337%20%5BEasy%5D.py)
 
 ---
 
@@ -581,7 +581,7 @@ This problem was asked by Microsoft.
 
 You have an N by N board. Write a function that, given N, returns the number of possible arrangements of the board where N queens can be placed on the board without threatening each other, i.e. no two queens share the same row, column, or diagonal.
 
-[Solution](Solutions/problem_038.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2338%20%5BHard%5D.py)
 
 ---
 
@@ -601,7 +601,7 @@ Implement Conway's Game of Life. It should be able to be initialized with a star
 
 You can represent a live cell with an asterisk `*` and a dead cell with a dot `.`.
 
-[Solution](Solutions/problem_039.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2339%20%5BMedium%5D.py)
 
 ---
 
@@ -615,7 +615,7 @@ For example, given `[6, 1, 3, 3, 3, 6, 6]`, return `1`. Given `[13, 19, 13, 13]`
 
 Do this in $O(N)$ time and $O(1)$ space.
 
-[Solution](Solutions/problem_040.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2340%20%5BHard%5D.py)
 
 ---
 
@@ -631,7 +631,7 @@ Given the list of flights [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 
 
 Given the list of flights [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', you should return the list ['A', 'B', 'C', 'A', 'C'] even though ['A', 'C', 'A', 'B', 'C'] is also a valid itinerary. However, the first one is lexicographically smaller.
 
-[Solution](Solutions/problem_041.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2341%20%5BMedium%5D.py)
 
 ---
 
@@ -645,7 +645,7 @@ Integers can appear more than once in the list. You may assume all numbers in th
 
 For example, given `S = [12, 1, 61, 5, 9, 2]` and `k = 24`, return [12, 9, 2, 1] since it sums up to 24.
 
-[Solution](Solutions/problem_042.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2342%20%5BHard%5D.py)
 
 ---
 
@@ -661,7 +661,7 @@ Implement a stack that has the following methods:
 
 Each method should run in constant time.
 
-[Solution](Solutions/problem_043.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2343%20%5BEasy%5D.py)
 
 ---
 
@@ -677,7 +677,7 @@ You may assume each element in the array is distinct.
 
 For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4, 3). The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.
 
-[Solution](Solutions/problem_044.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2344%20%5BMedium%5D.py)
 
 ---
 
@@ -687,7 +687,7 @@ This problem was asked by Two Sigma.
 
 Using a function rand5() that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function rand7() that returns an integer from 1 to 7 (inclusive).
 
-[Solution](Solutions/problem_045.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2345%20%5BEasy%5D.py)
 
 ---
 
@@ -699,7 +699,7 @@ Given a string, find the longest palindromic contiguous substring. If there are 
 
 For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
 
-[Solution](Solutions/problem_046.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2346%20%5BHard%5D.py)
 
 ---
 
@@ -711,7 +711,7 @@ Given a array of numbers representing the stock prices of a company in chronolog
 
 For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could buy the stock at 5 dollars and sell it at 10 dollars.
 
-[Solution](Solutions/problem_047.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2347%20%5BEasy%5D.py)
 
 ---
 
@@ -743,7 +743,7 @@ You should return the following tree:
 d  e f  g
 ```
 
-[Solution](Solutions/problem_048.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2348%20%5BMedium%5D.py)
 
 ---
 
@@ -759,7 +759,7 @@ Given the array [-5, -1, -8, -9], the maximum sum would be 0, since we would not
 
 Do this in O(N) time.
 
-[Solution](Solutions/problem_049.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2349%20%5BMedium%5D.py)
 
 ---
 
@@ -783,7 +783,7 @@ For example, given the following tree:
 
 You should return 45, as it is (3 + 2) * (4 + 5).
 
-[Solution](Solutions/problem_050.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2350%20%5BEasy%5D.py)
 
 ---
 
@@ -797,7 +797,7 @@ It should run in O(N) time.
 
 Hint: Make sure each one of the 52! permutations of the deck is equally likely.
 
-[Solution](Solutions/problem_051.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2351%20%5BMedium%5D.py)
 
 ---
 
@@ -811,7 +811,7 @@ set(key, value): sets key to value. If there are already n items in the cache an
 get(key): gets the value at key. If no such key exists, return null.
 Each operation should run in O(1) time.
 
-[Solution](Solutions/problem_052.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2352%20%5BHard%5D.py)
 
 ---
 
@@ -821,7 +821,7 @@ This problem was asked by Apple.
 
 Implement a queue using two stacks. Recall that a queue is a FIFO (first-in, first-out) data structure with the following methods: enqueue, which inserts an element into the queue, and dequeue, which removes it.
 
-[Solution](Solutions/problem_053.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2353%20%5BMedium%5D.py)
 
 ---
 
@@ -833,7 +833,7 @@ Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits
 
 Implement an efficient sudoku solver.
 
-[Solution](Solutions/problem_054.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2354%20%5BHard%5D.py)
 
 ---
 
@@ -848,7 +848,7 @@ Implement a URL shortener with the following methods:
 
 Hint: What if we enter the same URL twice?
 
-[Solution](Solutions/problem_055.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2355%20%5BEasy%5D.py)
 
 ---
 
@@ -858,7 +858,7 @@ This problem was asked by Google.
 
 Given an undirected graph represented as an adjacency matrix and an integer k, write a function to determine whether each vertex in the graph can be colored such that no two adjacent vertices share the same color using at most k colors.
 
-[Solution](Solutions/problem_056.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2356%20%5BMedium%5D.py)
 
 ---
 
@@ -872,7 +872,7 @@ You can assume that there are no spaces at the ends of the string and that there
 
 For example, given the string "the quick brown fox jumps over the lazy dog" and k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
 
-[Solution](Solutions/problem_057.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2357%20%5BMedium%5D.py)
 
 ---
 
@@ -888,7 +888,7 @@ For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 
 
 You can assume all the integers in the array are unique.
 
-[Solution](Solutions/problem_058.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2358%20%5BMedium%5D.py)
 
 ---
 
@@ -898,7 +898,7 @@ This problem was asked by Google.
 
 Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
 
-[Solution](Solutions/problem_059.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2359%20%5BHard%5D.py)
 
 ---
 
@@ -912,7 +912,7 @@ For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return tru
 
 Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.
 
-[Solution](Solutions/problem_060.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2360%20%5BMedium%5D.py)
 
 ---
 
@@ -926,7 +926,7 @@ Do this faster than the naive method of repeated multiplication.
 
 For example, pow(2, 10) should return 1024.
 
-[Solution](Solutions/problem_061.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2361%20%5BMedium%5D.py)
 
 ---
 
@@ -942,7 +942,7 @@ For example, given a 2 by 2 matrix, you should return 2, since there are two way
 
 Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
 
-[Solution](Solutions/problem_062.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2362%20%5BMedium%5D.py)
 
 ---
 
@@ -963,7 +963,7 @@ For example, given the following matrix:
 
 and the target word 'FOAM', you should return true, since it's the leftmost column. Similarly, given the target word 'MASS', you should return true, since it's the last row.
 
-[Solution](Solutions/problem_063.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2363%20%5BEasy%5D.py)
 
 ---
 
@@ -975,7 +975,7 @@ A knight's tour is a sequence of moves by a knight on a chessboard such that all
 
 Given N, write a function to return the number of knight's tours on an N by N chessboard.
 
-[Solution](Solutions/problem_064.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2364%20%5BHard%5D.py)
 
 ---
 
@@ -999,7 +999,7 @@ You should print out the following:
 1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12
 ```
 
-[Solution](Solutions/problem_065.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2365%20%5BEasy%5D.py)
 
 ---
 
@@ -1011,7 +1011,7 @@ Assume you have access to a function toss_biased() which returns 0 or 1 with a p
 
 Write a function to simulate an unbiased coin toss.
 
-[Solution](Solutions/problem_066.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2366%20%5BMedium%5D.py)
 
 ---
 
@@ -1026,7 +1026,7 @@ Implement an LFU (Least Frequently Used) cache. It should be able to be initiali
 
 Each operation should run in O(1) time.
 
-[Solution](Solutions/problem_067.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2367%20%5BHard%5D.py)
 
 ---
 
@@ -1058,7 +1058,7 @@ The board would look like this:
 
 You should return 2, since bishops 1 and 3 attack each other, as well as bishops 3 and 4.
 
-[Solution](Solutions/problem_068.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2368%20%5BMedium%5D.py)
 
 ---
 
@@ -1072,7 +1072,7 @@ For example, if the list is [-10, -10, 5, 2], we should return 500, since that's
 
 You can assume the list has at least three integers.
 
-[Solution](Solutions/problem_069.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2369%20%5BEasy%5D.py)
 
 ---
 
@@ -1084,7 +1084,7 @@ Given a positive integer n, return the n-th perfect number.
 
 For example, given 1, you should return 19. Given 2, you should return 28.
 
-[Solution](Solutions/problem_070.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2370%20%5BEasy%5D.py)
 
 ---
 
@@ -1096,7 +1096,7 @@ Using a function rand7() that returns an integer from 1 to 7 (inclusive) with un
 
 (repeated question - Problem 45)
 
-[Solution](Solutions/problem_071.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2371%20%5BEasy%5D.py)
 
 ---
 
@@ -1130,7 +1130,7 @@ A
 
 Should return null, since we have an infinite loop.
 
-[Solution](Solutions/problem_072.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2372%20%5BHard%5D.py)
 
 ---
 
@@ -1140,7 +1140,7 @@ This problem was asked by Google.
 
 Given the head of a singly linked list, reverse it in-place.
 
-[Solution](Solutions/problem_073.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2373%20%5BEasy%5D.py)
 
 ---
 
@@ -1165,7 +1165,7 @@ For example, given N = 6 and X = 12, you should return 4, since the multiplicati
 
 And there are 4 12's in the table.
 
-[Solution](Solutions/problem_074.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%2374%20%5BMedium%5D.py)
 
 ---
 

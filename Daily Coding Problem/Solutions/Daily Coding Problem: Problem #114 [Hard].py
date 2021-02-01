@@ -14,25 +14,51 @@
 #
 #
 def reverse_word(string):
-    delimiters = ":/"
     string = list(string)
-    print(string)
-    left = 0
-    right = len(string) - 1
-    while left < right:
-        if string[left] in delimiters and string[right] in delimiters:
-            string = string[right + 1:] + string[left:right + 1] + string[:left]
-            left += 1
-            right -= 1
-        elif string[left] not in delimiters and string[right] not in delimiters:
-            left += 1
-            right -= 1
-        elif string[left] in delimiters and string[right] not in delimiters:
-            right -= 1
-        elif string[right] in delimiters and string[left] not in delimiters:
-            left += 1
-    string = "".join(string)
-    return string
+    letters = []
+    delimiters = []
+    for i, letter in enumerate(string):
+        if letter.isalnum():
+            if letters:
+                if string[i - 1].isalnum():
+                    letters[-1].append(letter)
+                else:
+                    letters.append([letter])
+            else:
+                letters.append([letter])
+        else:
+            if delimiters:
+                if not string[i - 1].isalnum():
+                    delimiters[-1].append(letter)
+                else:
+                    delimiters.append([letter])
+            else:
+                delimiters.append([letter])
+    letters.reverse()
+    result = []
+    if string[0].isalnum():
+        if len(letters) == len(delimiters):
+            for word, delimiter in zip(letters, delimiters):
+                result.extend(word)
+                result.extend(delimiter)
+        else:
+            result.extend(letters[0])
+            for word, delimiter in zip(letters[1:], delimiters):
+                result.extend(delimiter)
+                result.extend(word)
+    else:
+        if len(letters) == len(delimiters):
+            for word, delimiter in zip(letters, delimiters):
+                result.extend(delimiter)
+                result.extend(word)
+        else:
+            result.extend(delimiters[0])
+            for word, delimiter in zip(letters, delimiters[1:]):
+                result.extend(word)
+                result.extend(delimiter)
+    result = "".join(result)
+    return result
 
 
-print(reverse_word("hello//world:here"))
+assert reverse_word("hello/world:here/") == "here/world:hello/"
+assert reverse_word("hello//world:here") == "here//world:hello"

@@ -14,14 +14,18 @@
 #
 def reverse_word(string):
     string = list(string)
-    print(string)
     left = 0
     right = len(string) - 1
-    while left < right:
+    old_left = 0
+    old_right = len(string)
+    while left <= right:
         if string[left] == " " and string[right] == " ":
-            string = string[right + 1:] + string[left:right + 1] + string[:left]
-            left += 1
-            right -= 1
+            string = string[:old_left] + string[right + 1:old_right] + string[left:right + 1] + string[old_left:left] + string[old_right:]
+            tmp = left
+            left = old_left + old_right - right
+            right = old_right - ((tmp - old_left) + 2)
+            old_left = left
+            old_right = right + 1
         elif string[left] != " " and string[right] != " ":
             left += 1
             right -= 1
@@ -33,4 +37,4 @@ def reverse_word(string):
     return string
 
 
-print(reverse_word("hello world here"))
+assert reverse_word("hello world here") == "here world hello"

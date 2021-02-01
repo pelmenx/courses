@@ -1809,7 +1809,7 @@ Given a string of words delimited by spaces, reverse the words in string. For ex
 
 Follow-up: given a mutable string representation, can you perform this operation in-place?
 
-[Solution](Solutions/problem_113.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23113%20%5BMedium%5D.py)
 
 ---
 
@@ -1821,7 +1821,7 @@ Given a string and a set of delimiters, reverse the words in the string while ma
 
 Follow-up: Does your solution work for the following cases: "hello/world:here/", "hello//world:here"
 
-[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23113%20%5BMedium%5D.py)
+[Solution](https://github.com/pelmenx/courses/blob/master/Daily%20Coding%20Problem/Solutions/Daily%20Coding%20Problem:%20Problem%20%23114%20%5BHard%5D.py)
 
 ---
 

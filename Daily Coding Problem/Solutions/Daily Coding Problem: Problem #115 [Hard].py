@@ -52,7 +52,6 @@ e = Binary_tree_1(5)
 f = Binary_tree_1(6)
 g = Binary_tree_1(7)
 h = Binary_tree_1(8)
-
 a.left = b
 a.right = c
 b.right = d
